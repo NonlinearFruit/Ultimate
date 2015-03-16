@@ -46,7 +46,7 @@ AppsKey & Right:: ; <-- End of Line and End of Document
 		}
 		return
 
-AppsKey & a:: ; <-- Queuing Paste (annex)
+AppsKey & a:: ; <-- Queuing Paste (a)nnex
 		pasteData(qClip%qPasteIndex%)	    ; Paste next item in queue
 		if (qPasteIndex==qCopyIndex)		; Keep qPaste from passing qCopy
 		{
@@ -58,7 +58,7 @@ AppsKey & a:: ; <-- Queuing Paste (annex)
 		}
 		return
 
-AppsKey & c:: ; <-- Incremented Copy
+AppsKey & c:: ; <-- Incremented (C)opy
 		; Issue with pasting before copying is done!!!
 		
 		incClip := copySelectedData()		; Save incClip
@@ -83,7 +83,7 @@ AppsKey & c:: ; <-- Incremented Copy
 		StringReplace , incClip, incClip, ~%incIndex%, ~	; Replace ~# in the incClip with ~
 		return
 
-AppsKey & e:: ; <-- Encompass Paste	
+AppsKey & e:: ; <-- (E)ncompass Paste	
 		constants := copySelectedData()
 		StringSplit, constantArray, constants, `,
 		Loop, %constantArray0%
@@ -163,21 +163,6 @@ AppsKey & q:: ; <-- (Q)ueuing Copy
 		qClip%qCopyIndex% = 					; Set next qClip to be empty
 		return
 
-AppsKey & s:: ; <-- Persisting Paste [(s)alvage]
-		if(!GetKeyState("Shift","p"))
-		{	; If Shift not pressed
-			fileName = persistantCopyPaste.txt 	; Set where to retrieve text
-			data := fileReader(fileName)		; Get text from file
-			pasteData(data)						; Paste text
-		}
-		else
-		{	; If Shift pressed					; Set where to retrieve text
-			fileName = \\cratus\students\JMBolen2017\persistantCopyPaste.txt 	
-			data := fileReader(fileName)		; Get text from file
-			pasteData(data)						; Paste text
-		}					
-		return
-
 Appskey & t:: ; <-- Always On (T)op (Credit to Appskey Guy)
 	WinGetTitle, TempText, A
 	if(!GetKeyState("Shift","p"))
@@ -210,3 +195,8 @@ AppsKey & =:: ; <-- Send Time
       FormatTime, time,, h:mm tt
       pasteData(time)
       return
+
+AppsKey & Enter:: ; <-- Jump to end of line then hit enter
+	Send {End}
+	Send {Enter}
+	return

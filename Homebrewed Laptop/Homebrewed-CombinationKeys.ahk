@@ -11,12 +11,6 @@
 }
 return
 
-;Press "pzs" to lauch Project Zomboid
-~s::
-   If GetKeyState("p","p") && GetKeyState("z","p") {
-      Run C:\Program Files (x86)\Steam\SteamApps\common\ProjectZomboid\ProjectZomboidServer.bat
-   }
-
 ;Tags program, press bam
 ;---------------------------------------------------------------------------------------------------------
 ~m::

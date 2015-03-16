@@ -134,8 +134,8 @@
 		}
 		else
 		{
+			Run http://www.google.com/search?hl=en&q=%query1%
 			Msgbox %query1% is not a recognized command {a,b,d,g,i,m,s,t,u,w,y} ... So we'll google it!!
-			Run http://www.google.com/search?hl=en&q=%query2%
 		}
 		return
 			
