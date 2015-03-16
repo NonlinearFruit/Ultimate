@@ -1,0 +1,142 @@
+------------------------
+Internet -- WinKey -- #
+------------------------
+#a    --     Insta-(A)HK
+
+#b    --     Insta-(B)ible (ESV)
+
+#d    --     Insta-(D)ictionary
+
+#f    --     (F)acebook
+
+#g    --     Insta-(G)oogle
+
+#i    --     Insta-Google (I)mages
+
+#m    --     Insta-Google (M)aps
+
+#r    --     (R)eload
+
+#s    --     Insta-(S)tackOverFlow
+
+#t    --     Insta-(T)hesaurus
+
+#u    --     Insta-(U)RL
+
+#w    --     Insta-(W)ikipedia
+
+#y    --     (Y)outube
+
+#y    --     Insta-(Y)outube
+
+#z    --     AHK Documentation
+
+------------------------
+  Homebrewed Internet
+------------------------
+#d    --    (D)2L 
+
+#e    --    Project (E)uler
+
+#m    --     (M)inecraft Song Playlist
+
+#p    --     (P)roject Zomboid
+
+#u    --     (M)U Email
+
+------------------------
+Function -- AppsKey
+------------------------
+AppsKey & Up    --     Wheel (Up)
+
+AppsKey & Down    --     Wheel (Down)
+
+AppsKey & Left    --     Beginning of Line and Beginning of Document
+
+AppsKey & Right    --     End of Line and End of Document
+
+AppsKey & a    --     Queuing Paste (annex)
+
+AppsKey & c    --     Incremented Copy
+
+AppsKey & e    --     Encompass Paste	
+
+AppsKey & g    --     Encompass Copy [(G)rap]
+
+AppsKey & i    --     (I)dea Saver
+
+AppsKey & k    --    (K)eystroking Copy Paste
+
+AppsKey & l    --     Highlights (L)ine
+
+AppsKey & o    --     Make Current Window Transparent (Toggle-ish) [(o)paque]
+
+AppsKey & q    --     (Q)ueuing Copy
+
+AppsKey & s    --     Persisting Paste [(s)alvage]
+
+Appskey & t    --     Always On (T)op (Credit to Appskey Guy)
+
+AppsKey & v    --     Incremented Paste
+
+AppsKey & -    --     Send Date
+
+AppsKey & =    --     Send Time 
+
+------------------------
+  Homebrewed Function
+------------------------
+AppsKey & p    --     Persisting Copy [(p)ersist]
+
+AppsKey & ,    --    Official Email
+
+AppsKey & .    --    Personal Email 
+
+AppsKey & /    --    Username
+
+AppsKey & '    --    Username
+
+AppsKey & [    --    Gamer Tag 
+
+AppsKey & F2    --    Hotkey Summarizer
+
+------------------------
+Program -- AltKey -- !
+------------------------
+!d    --     Choose (D)irectory
+
+!d    --     Insta-(D)irectory
+
+!n    --     Runs Notepad
+
+!Left    --    Spotify Previous Song 
+
+!Right    --    Spotify Next Song
+
+!UP    --    Spotify Pause
+
+!Down    --    Spotify Info
+
+!PgUP    --    Spotify Volume Up
+
+!PgDn    --    Spotify Volume Down
+
+!End    --     Spotify Mute
+
+------------------------
+  Program Homebrewed
+------------------------
+!c    --     (C)alculator
+
+!f    --    (F)TB
+
+!n    --     (N)otepad++
+
+!p    --     Cmd (P)rompt
+
+!r    --     (R)obocode
+
+!r    --     (R)obocode Javadoc
+
+!s    --     (S)ublime Text 2
+
