@@ -10,7 +10,7 @@
 
 ; AppsKey & Right:: End of line
 
-; AppsKey & a::	Queuing Paste (a)nnex
+; AppsKey & a::	Queuing Paste (A)nnex
 
 ; AppsKey & b::
 
@@ -40,30 +40,30 @@
 
 ; AppsKey & o:: Make Current Window Transparent [(o)paque]
 
-AppsKey & p:: ; <-- Persisting Copy [(p)ersist]
-        if(!GetKeyState("Shift","p"))
-        {   ; If Shift not pressed, Copy
-            data := copySelectedData()          ; Get selected text
-                                                ; Set where to persist text
-            fileName = \\cratus\students\JMBolen2017\persistantCopyPaste.txt    
-            fileDeletion(fileName)              ; Delete old text
-            fileWriter(data,fileName)           ; Persist new text
-        }
-        else
-        {   ; If Shift pressed, Paste
-            data := copySelectedData()          ; Get selected text
-                                                ; Set where to persist text
-            fileName = \\cratus\students\JMBolen2017\persistantCopyPaste.txt    
-            fileDeletion(fileName)              ; Delete old text
-            fileWriter(data,fileName)           ; Persist new text
-        }
-        return
+; AppsKey & p:: (P)ersisting Copy
+        ; if(!GetKeyState("Shift","p"))
+        ; {   ; If Shift not pressed, Copy
+        ;     data := copySelectedData()          ; Get selected text
+        ;                                         ; Set where to persist text
+        ;     fileName = \\cratus\students\JMBolen2017\persistantCopyPaste.txt    
+        ;     fileDeletion(fileName)              ; Delete old text
+        ;     fileWriter(data,fileName)           ; Persist new text
+        ; }
+        ; else
+        ; {   ; If Shift pressed, Paste
+        ;     data := copySelectedData()          ; Get selected text
+        ;                                         ; Set where to persist text
+        ;     fileName = \\cratus\students\JMBolen2017\persistantCopyPaste.txt    
+        ;     fileDeletion(fileName)              ; Delete old text
+        ;     fileWriter(data,fileName)           ; Persist new text
+        ; }
+        ; return
 
 ; AppsKey & q:: (Q)ueuing Copy
 
 ; AppsKey & r:: 
 
-; AppsKey & s:: Persisting Paste (s)alvage
+; AppsKey & s::
 
 ; Appskey & t:: Always On (T)op
 

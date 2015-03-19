@@ -8,7 +8,7 @@
 
 !c:: ; <-- (C)alculator
 	Run  C:\WINDOWS\system32\calc.exe
-	return
+	Return
 
 ; !d:: Choose (D)irectory
 
@@ -16,9 +16,7 @@
      
 ; !e::
  
-!f:: ; <--(F)TB
-	Run C:\Users\Nonlinear Fruit\Documents\Games\Minecraft\FTB.exe
-	return
+; !f::
 
 ; !g::
 
@@ -36,31 +34,29 @@
 
 ; <!n:: (N)otepad
 
->!n:: ; <-- (N)otepad++
-	Run C:\Program Files (x86)\Notepad++\notepad++.exe
-	return
+>!n:: ; <-- (N)etbeans
+	Run C:\Program Files (x86)\NetBeans 8.0.2\bin\netbeans.exe
+	Return
 
 ; !o::
 
 !p:: ; <-- Cmd (P)rompt
 	Run C:\Windows\System32\cmd.exe
-	return
+	Return
 
 ; !q::
 
-!r:: ; <-- (R)obocode
-	Run C:\robocode\robocode.bat
-	return
+; !r::
 
-+!r:: ; <-- (R)obocode Javadoc
-	Run C:\robocode\javadoc\index-all.html
-	return
+; +!r::
 
 !s:: ; <-- (S)ublime Text 2
-	Run C:\Users\Nonlinear Fruit\Desktop\Sublime\sublime_text.exe
-	return
+	Run C:\Program Files\Sublime Text 2\sublime_text.exe
+	Return
 
-; !t::
+!t:: ; <-- (T)ime Card Folder
+	Run C:\Users\Ben\Documents\LaGwana\Time Cards
+	Return
 
 ; !u::
 

@@ -2,7 +2,7 @@
 ;Homebrewed Websites - Use Win Key
 ;---------------------------------
 
-#a:: ;<--Documentary(A)ddict
+#a:: ; <--Documentary(A)ddict
 	Run http://www.documentaryaddict.com/
 	return
 
@@ -42,9 +42,7 @@
 
 ; #l::
 
-#m:: ; <-- (M)inecraft Song Playlist
-	Run https://www.youtube.com/playlist?list=PL38BF48E62BD697E3
-	return
+; #m:: RESERVED [For Minimizing all windows]
 
 ; +#m:: Insta-Google (M)aps
 

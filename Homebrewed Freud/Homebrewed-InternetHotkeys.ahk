@@ -2,9 +2,7 @@
 ;Homebrewed Websites - Use Win Key
 ;---------------------------------
 
-#a:: ; <--Documentary(A)ddict
-	Run http://www.documentaryaddict.com/
-	return
+; #a::
 
 ; +#a:: Insta-(A)HK
 
@@ -14,15 +12,13 @@
 
 ; #c::
 
-#d:: ; <--(D)2L 
-	Run https://d2l.manchester.edu/
+#d:: ; <-- Google (D)rive 
+	Run https://drive.google.com/drive/#my-drive
 	return
 
 ; +#d:: Insta-(D)ictionary
 
-#e:: ; <--Project (E)uler
-	Run www.projecteuler.net
-	return
+; #e::
 
 ; #f:: (F)acebook
 
@@ -30,7 +26,9 @@
 
 ; +#g:: Insta-(G)oogle
 
-; #h::
+#h:: ; <-- Git(H)ub 
+	Run https://github.com/
+	return
 
 ; #i::
 
@@ -38,11 +36,13 @@
 
 ; #j::
 
-; #k::w
+; #k::
 
 ; #l::
 
-; #m:: RESERVED [For Minimizing all windows]
+#m:: ; <-- G(m)ail
+	Run https://mail.google.com/mail/u/0/#inbox
+	return
 
 ; +#m:: Insta-Google (M)aps
 
@@ -50,9 +50,7 @@
 
 ; #o::
 
-#p:: ; <-- (P)roject Zomboid
-	Run www.projectzomboid.com/blog/
-	return
+; #p::
 
 ; #q::
 
@@ -68,9 +66,7 @@
 
 ; +#t:: Insta-(T)hesaurus
 
-#u:: ; <-- (M)U Email
-	Run https://outlook.office365.com/owa/?wa=wsignin1.0
-	return
+; #u::
 	  
 ; +#u:: Insta-(U)RL
 
