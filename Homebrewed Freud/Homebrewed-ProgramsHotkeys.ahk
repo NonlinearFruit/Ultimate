@@ -18,7 +18,9 @@
  
 ; !f::
 
-; !g::
+!g:: ; <-- (G)it Command Line
+	Run C:\Users\Ben\AppData\Local\GitHub\GitHub.appref-ms --open-shell
+	Return
 
 ; !h::  
 
@@ -58,7 +60,9 @@
 	Run C:\Users\Ben\Documents\LaGwana\Time Cards
 	Return
 
-; !u::
+!u:: ; <-- (U)ltimate Repository Folder
+	Run C:\Programming\AHK\Ultimates\Ultimate\Ultimate
+	Return
 
 ; !v::
 

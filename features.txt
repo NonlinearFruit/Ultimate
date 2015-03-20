@@ -34,71 +34,162 @@ Internet -- WinKey -- #
 ------------------------
   Homebrewed Internet
 ------------------------
-#d    --    (D)2L 
+#d    --     Google (D)rive 
 
-#e    --    Project (E)uler
+#h    --     Git(H)ub 
 
-#m    --     (M)inecraft Song Playlist
-
-#p    --     (P)roject Zomboid
-
-#u    --     (M)U Email
+#m    --     G(m)ail
 
 ------------------------
-Function -- AppsKey
+Function -- CapsLock
 ------------------------
-AppsKey & Up    --     Wheel (Up)
+--     Wheel (Up)
 
-AppsKey & Down    --     Wheel (Down)
+--     Wheel (Down)
 
-AppsKey & Left    --     Beginning of Line and Beginning of Document
+--     Beginning of Line and Beginning of Document
 
-AppsKey & Right    --     End of Line and End of Document
+--     End of Line and End of Document
 
-AppsKey & a    --     Queuing Paste (annex)
+--     Queuing Paste [(a)nnex]
 
-AppsKey & c    --     Incremented Copy
+--     Incremented (C)opy
 
-AppsKey & e    --     Encompass Paste	
+# in the incClip with ~
+		return
 
-AppsKey & g    --     Encompass Copy [(G)rap]
+CapsLock & e    --     (E)ncompass Paste	
 
-AppsKey & i    --     (I)dea Saver
+--     Encompass Copy [(G)rap]
 
-AppsKey & k    --    (K)eystroking Copy Paste
+--     (I)dea Saver
 
-AppsKey & l    --     Highlights (L)ine
+--    (K)eystroking Copy Paste
 
-AppsKey & o    --     Make Current Window Transparent (Toggle-ish) [(o)paque]
+!GetKeyState("Shift","p"))
+		{ ;Copying
+			Run, Notepad KeystrokeCopyPaste.txt
+		}
+		else
+		{ ;Pasting (By typing out)
+			msgbox ok
+			txt := fileReader("KeystrokeCopyPaste.txt")
+			Send %txt%
+		}
+		return
 
-AppsKey & q    --     (Q)ueuing Copy
+CapsLock & l    --     Highlights (L)ine
 
-AppsKey & s    --     Persisting Paste [(s)alvage]
+--     Make Current Window Transparent (Toggle-ish) [(o)paque]
 
-Appskey & t    --     Always On (T)op (Credit to Appskey Guy)
+!transLevel) ; Trans Off
+	{
+		transLevel = 201
+	}
+	else if (transLevel>200){
+		transLevel = 151
+	}
+	else if (transLevel>150){
+		transLevel = 101
+	}
+	else if (transLevel>100){
+		transLevel = 51
+	}
+	else
+	{
+		WinSet, Transparent, OFF, A
+		return
+	}
+	WinSet, Transparent, %transLevel%, A
+	return
 
-AppsKey & v    --     Incremented Paste
+CapsLock & q    --     (Q)ueuing Copy
 
-AppsKey & -    --     Send Date
+--     Always On (T)op (Credit to AppsKey Guy)
 
-AppsKey & =    --     Send Time 
+!= "† ")
+	      TempText := "† " . TempText ;chr(134)
+	}
+	else
+	{
+		WinSet AlwaysOnTop, Off, A
+		if(SubStr(TempText, 1, 2) = "† ")
+			TempText := SubStr(TempText, 3)
+	}
+	WinSetTitle, A, , %TempText%
+	Return
+ 
+CapsLock & v    --     Incremented Paste
+
+--     Send Date
+
+!GetKeyState("Shift","p"))
+	{ ; Normal Date (w/o +)
+		FormatTime, date,, MM/dd/yy
+	}
+	else
+	{ ; Sorting Date (w/ +)
+		FormatTime, date,, yy/MM/dd
+	}
+	pasteData(date)
+	return
+
+CapsLock & =    --     Send Time 
 
 ------------------------
   Homebrewed Function
 ------------------------
-AppsKey & p    --     Persisting Copy [(p)ersist]
+--     Persisting Copy [(p)ersist]
 
-AppsKey & ,    --    Official Email
+!GetKeyState("Shift","p"))
+        {   ; If Shift not pressed, Copy
+            data := copySelectedData()          ; Get selected text
+                                                ; Set where to persist text
+            fileName = C:\Programming\AHK\Ultimates\Scripts\Ultimatev7.6\persistantCopyPaste.txt    
+            fileDeletion(fileName)              ; Delete old text
+            fileWriter(data,fileName)           ; Persist new text
+        }
+        else
+        {   ; If Shift pressed, Paste
+            data := copySelectedData()          ; Get selected text
+                                                ; Set where to persist text
+            fileName = C:\Programming\AHK\Ultimates\Scripts\Ultimatev7.6\persistantCopyPaste.txt    
+            fileDeletion(fileName)              ; Delete old text
+            fileWriter(data,fileName)           ; Persist new text
+        }
+        return
 
-AppsKey & .    --    Personal Email 
+; CapsLock & q:: (Q)ueuing Copy
 
-AppsKey & /    --    Username
+; CapsLock & r:: 
 
-AppsKey & '    --    Username
+; CapsLock & s:: Persisting Paste (s)alvage
 
-AppsKey & [    --    Gamer Tag 
+; CapsLock & t:: Always On (T)op
 
-AppsKey & F2    --    Hotkey Summarizer
+; CapsLock & u::
+ 
+; CapsLock & v:: Incremented Paste
+
+; CapsLock & w:: 
+
+; CapsLock & x:: 
+
+; CapsLock & y:: 
+
+; CapsLock & z::
+
+CapsLock & ,    --    Official Email
+
+--    Personal Email 
+
+--    Username
+
+--    LaGwana Email
+
+--    Gamer Tag 
+
+--    Hotkey Summarizer
 
 ------------------------
 Program -- AltKey -- !
@@ -128,15 +219,11 @@ Program -- AltKey -- !
 ------------------------
 !c    --     (C)alculator
 
-!f    --    (F)TB
-
-!n    --     (N)otepad++
+!n    --     (N)etbeans
 
 !p    --     Cmd (P)rompt
 
-!r    --     (R)obocode
-
-!r    --     (R)obocode Javadoc
-
 !s    --     (S)ublime Text 2
+
+!t    --     (T)ime Card Folder
 

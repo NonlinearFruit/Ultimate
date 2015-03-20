@@ -63,7 +63,7 @@ CapsLock & p:: ; <-- Persisting Copy [(p)ersist]
 
 ; CapsLock & r:: 
 
-; CapsLock & s:: Persisting Paste (s)alvage
+; CapsLock & s:: Persisting Paste (S)alvage
 
 ; CapsLock & t:: Always On (T)op
 

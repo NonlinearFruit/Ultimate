@@ -187,9 +187,16 @@ AppsKey & v:: ; <-- Incremented Paste
 		return
 
 AppsKey & -:: ; <-- Send Date
-      FormatTime, date,, MM/dd/yy
-      pasteData(date)
-      return
+      if(!GetKeyState("Shift","p"))
+	{ ; Normal Date (w/o +)
+		FormatTime, date,, MM/dd/yy
+	}
+	else
+	{ ; Sorting Date (w/ +)
+		FormatTime, date,, yy/MM/dd
+	}
+	pasteData(date)
+	return
 
 AppsKey & =:: ; <-- Send Time 
       FormatTime, time,, h:mm tt
@@ -200,3 +207,5 @@ AppsKey & Enter:: ; <-- Jump to end of line then hit enter
 	Send {End}
 	Send {Enter}
 	return
+
+

@@ -141,3 +141,15 @@ featureRetriever(str)
 	featureRetriever(str)
 	return
 }
+
+; Take the given modifier and maps 
+; the function hotkeys w/ that modifier 
+; tt the correct labels
+dynFunctionMapper(modify)
+{
+	; MsgBox, , Title, %modify%
+
+	; ToDo
+	; Map modify plus letters to 
+	; labels (and make the labels)
+}

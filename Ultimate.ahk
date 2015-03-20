@@ -23,6 +23,13 @@ SetCapsLockState, alwaysoff
 ; Homebrewed Hotkeys
 box = Freud
 
+; Choose a custom modifier for function keys 
+; [Note: not alt or win and if null -> AppsKey]
+customModifier = AppsKey
+
+; Map that modifier to all of the appropriate labels
+dynFunctionMapper(customModifier)
+
 /*
 //===================================\\
 ||                                  ||
@@ -67,9 +74,17 @@ box = Freud
 #Include CombinationKeys.ahk
 
 
-
+; Uncomment what you need
 ; if(box=Freud)
 ; {
+	; Map modifier to AppsKey for FunctionHotkeys
+	; [NOTE: Can't be Alt or Win]
+	; CapsLock::
+	; 	Send {AppsKey Down}
+	; 	KeyWait, CapsLock
+	; 	Send {AppsKey Up}
+	; 	Return
+
 	#Include Homebrewed Freud\Homebrewed-CombinationKeys.ahk
 	#Include Homebrewed Freud\Homebrewed-InternetHotkeys.ahk
 	#Include Homebrewed Freud\Homebrewed-FunctionHotkeys.ahk
@@ -77,6 +92,10 @@ box = Freud
 ; }
 ; else if(box=Mordecai)
 ; {
+; 	; Map modifier to AppsKey for FunctionHotkeys
+; 	; [NOTE: Can't be Alt or Win]
+; 	CapsLock::AppsKey
+; 
 ; 	#Include Homebrewed Mordecai\Homebrewed-CombinationKeys.ahk
 ; 	#Include Homebrewed Mordecai\Homebrewed-InternetHotkeys.ahk
 ; 	#Include Homebrewed Mordecai\Homebrewed-FunctionHotkeys.ahk

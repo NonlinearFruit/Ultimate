@@ -6,7 +6,13 @@
 
 ; +#a:: Insta-(A)HK
 
-; #b::
+#b:: ; <-- (B)itBucket
+	Run https://bitbucket.org/
+	Return
+
+^#b:: 
+	Send R}>j98o8fuy*#TW2bB
+	Return
 
 ; +#b:: Insta-(B)ible (ESV)
 
@@ -58,7 +64,9 @@
 
 ; #r:: (R)eload
 
-; #s::
+#s:: ; <-- (S)qlFiddle
+	Run http://sqlfiddle.com/
+	Return
 
 ; +#s:: Insta-(S)tackOverFlow
 
@@ -70,7 +78,9 @@
 	  
 ; +#u:: Insta-(U)RL
 
-; #v::
+#v:: ; <--Vertabelo
+	Run https://my.vertabelo.com
+	Return
 
 ; #w::
 
