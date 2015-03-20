@@ -2,45 +2,45 @@
 ;Homebrewed Functionality - Use CapsLock
 ;--------------------------------------
 
-; CapsLock & Up:: Wheel up
+; GotoUP: Wheel up
 
-; CapsLock & Down:: Wheel down
+; GotoDOWN: Wheel down
 
-; CapsLock & Left:: Beginning of line
+; GotoLEFT: Beginning of line
 
-; CapsLock & Right:: End of line
+; GotoRIGHT: End of line
 
-; CapsLock & a:: Queuing Paste (a)nnex
+; GotoA: Queuing Paste (a)nnex
 
-; CapsLock & b::
+; GotoB:
 
-; CapsLock & c:: Incremented (C)opy
+; GotoC: Incremented (C)opy
 
-; CapsLock & d::
+; GotoD:
 
-; CapsLock & e:: (E)ncompass Paste	
+; GotoE: (E)ncompass Paste	
 
-; CapsLock & f:: 
+; GotoF: 
 
-; CapsLock & g:: Encompass Copy (G)rap
+; GotoG: Encompass Copy (G)rap
 
-; CapsLock & h::
+; GotoH:
 
-; CapsLock & i:: (I)dea Saver
+; GotoI: (I)dea Saver
 
-; CapsLock & j::
+; GotoJ:
 
-; CapsLock & k:: (K)eystroking Copy Paste
+; GotoK: (K)eystroking Copy Paste
 
-; CapsLock & l:: Highlight (l)ine
+; GotoL: Highlight (l)ine
 
-; CapsLock & m::
+; GotoM:
 
-; CapsLock & n::
+; GotoN:
 
-; CapsLock & o:: Make Current Window Transparent [(o)paque]
+; GotoO: Make Current Window Transparent [(o)paque]
 
-CapsLock & p:: ; <-- Persisting Copy [(p)ersist]
+GotoP: ; <-- Persisting Copy [(p)ersist]
         if(!GetKeyState("Shift","p"))
         {   ; If Shift not pressed, Copy
             data := copySelectedData()          ; Get selected text
@@ -59,67 +59,67 @@ CapsLock & p:: ; <-- Persisting Copy [(p)ersist]
         }
         return
 
-; CapsLock & q:: (Q)ueuing Copy
+; GotoQ: (Q)ueuing Copy
 
-; CapsLock & r:: 
+; GotoR: 
 
-; CapsLock & s:: Persisting Paste (S)alvage
+; GotoS: Persisting Paste (S)alvage
 
-; CapsLock & t:: Always On (T)op
+; GotoT: Always On (T)op
 
-; CapsLock & u::
+; GotoU:
  
-; CapsLock & v:: Incremented Paste
+; GotoV: Incremented Paste
 
-; CapsLock & w:: 
+; GotoW: 
 
-; CapsLock & x:: 
+; GotoX: 
 
-; CapsLock & y:: 
+; GotoY: 
 
-; CapsLock & z::
+; GotoZ:
 
-CapsLock & ,:: ; <--Official Email
+GotoCOMMA: ; <--Official Email
 	data = bmbolen2017@spartans.manchester.edu
     pasteData(data)
     return
 
-CapsLock & .:: ; <--Personal Email 
+GotoPERIOD: ; <--Personal Email 
 	data = 1123benji5813@gmail.com
     pasteData(data)
     return  
 
-CapsLock & /:: ; <--Username
+GotoSLASH: ; <--Username
 	data = bmbolen2017
     pasteData(data)
     return
 
-CapsLock & SC027:: ; <--LaGwana Email
+GotoSC027: ; <--LaGwana Email
     data = bolen@lagwana.com
     pasteData(data)
     return
 
-CapsLock & '::
+GotoAPOSTRAPHE:
 	data = lagwanaben
     pasteData(data)
     return
      
-CapsLock & [:: ; <--Gamer Tag 
+GotoOPENBRACKET: ; <--Gamer Tag 
 	data = NonlinearFruit
     pasteData(data)
     return   
 
-; CapsLock & ]::
+; GotoCLOSEBRACKET:
 
-; CapsLock & \::
+; GotoBACKSLASH:
 
-; CapsLock & -:: Date
+; GotoMINUS: Date
 
-; CapsLock & =:: Time 
+; GotoPLUS: Time 
 
-; CapsLock & F1::
+; GotoF1:
 
-CapsLock & F2:: ; <--Hotkey Summarizer
+GotoF2: ; <--Hotkey Summarizer
     fileDeletion("features.txt")
     path := "C:\Programming\AHK\Ultimates\Scripts\Ultimatev7.6\"
 
@@ -163,23 +163,23 @@ CapsLock & F2:: ; <--Hotkey Summarizer
 
     return
 
-; CapsLock & F3:: find next related
+; GotoF3: find next related
 
-; CapsLock & F4:: next result related
+; GotoF4: next result related
 
-; CapsLock & F5::
+; GotoF5:
 
-; CapsLock & F6:: spell check related
+; GotoF6: spell check related
 
-; CapsLock & F7:: build related
+; GotoF7: build related
 
-; CapsLock & F8::
+; GotoF8:
 
-; CapsLock & F9:: sort lines related
+; GotoF9: sort lines related
 
-; CapsLock & F10::
+; GotoF10:
 
-; CapsLock & F11:: fullscreen related
+; GotoF11: fullscreen related
 
-; CapsLock & F12:: break build related
+; GotoF12: break build related
 

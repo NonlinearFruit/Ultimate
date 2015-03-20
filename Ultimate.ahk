@@ -25,7 +25,7 @@ box = Freud
 
 ; Choose a custom modifier for function keys 
 ; [Note: not alt or win and if null -> AppsKey]
-customModifier = AppsKey
+customModifier = CapsLock
 
 ; Map that modifier to all of the appropriate labels
 dynFunctionMapper(customModifier)
