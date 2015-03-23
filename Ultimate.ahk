@@ -27,7 +27,7 @@ box = Freud
 //===================================\\
 ||                                  ||
 ||      Soli Deo Gloria             ||
-|| Date: 03/15/15                   ||
+|| Date: 03/22/15                   ||
 || Ex Libris: Nonlinear Fruit       ||
 || Purpose: Increase User           ||
 ||          Efficiency              ||
@@ -70,10 +70,10 @@ box = Freud
 
 ; if(box=Freud)
 ; {
-	#Include Homebrewed Freud\Homebrewed-CombinationKeys.ahk
-	#Include Homebrewed Freud\Homebrewed-InternetHotkeys.ahk
-	#Include Homebrewed Freud\Homebrewed-FunctionHotkeys.ahk
-	#Include Homebrewed Freud\Homebrewed-ProgramsHotkeys.ahk
+	; #Include Homebrewed Freud\Homebrewed-CombinationKeys.ahk
+	; #Include Homebrewed Freud\Homebrewed-InternetHotkeys.ahk
+	; #Include Homebrewed Freud\Homebrewed-FunctionHotkeys.ahk
+	; #Include Homebrewed Freud\Homebrewed-ProgramsHotkeys.ahk
 ; }
 ; else if(box=Mordecai)
 ; {
@@ -84,10 +84,10 @@ box = Freud
 ; }
 ; else if(box=Laptop)
 ; {
-; 	#Include Homebrewed Laptop\Homebrewed-CombinationKeys.ahk
-; 	#Include Homebrewed Laptop\Homebrewed-InternetHotkeys.ahk
-; 	#Include Homebrewed Laptop\Homebrewed-FunctionHotkeys.ahk
-; 	#Include Homebrewed Laptop\Homebrewed-ProgramsHotkeys.ahk
+	#Include Homebrewed Laptop\Homebrewed-CombinationKeys.ahk
+	#Include Homebrewed Laptop\Homebrewed-InternetHotkeys.ahk
+	#Include Homebrewed Laptop\Homebrewed-FunctionHotkeys.ahk
+	#Include Homebrewed Laptop\Homebrewed-ProgramsHotkeys.ahk
 ; }
 ; else if(box=MU)
 ; {

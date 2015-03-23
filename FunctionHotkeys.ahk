@@ -117,7 +117,7 @@ AppsKey & i:: ; <-- (I)dea Saver
 		fileWriter(idea, fileName)
 		return
 
-AppsKey & k:: ; <--(K)eystroking Copy Paste
+AppsKey & k:: ; <-- (K)eystroking Copy Paste
 	if(!GetKeyState("Shift","p"))
 		{ ;Copying
 			Run, Notepad KeystrokeCopyPaste.txt
