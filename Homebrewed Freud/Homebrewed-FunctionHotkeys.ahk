@@ -98,11 +98,6 @@ CapsLock & SC027:: ; <--LaGwana Email
     data = bolen@lagwana.com
     pasteData(data)
     return
-
-CapsLock & '::
-	data = lagwanaben
-    pasteData(data)
-    return
      
 CapsLock & [:: ; <--Gamer Tag 
 	data = NonlinearFruit
