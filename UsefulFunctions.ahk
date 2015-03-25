@@ -357,12 +357,6 @@ dynFunctionMapper(modify)
 		Hotkey, %modify%.%key%, GotoSC027
 	}
 
-	if(IsLabel(GotoAPOSTRAPHE))
-	{
-		key := " & '"
-		Hotkey, %modify%.%key%, GotoAPOSTRAPHE
-	}
-
 	if(IsLabel(GotoOPENBRACKET))
 	{
 		key := " & ["
