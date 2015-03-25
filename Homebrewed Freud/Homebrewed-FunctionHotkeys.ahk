@@ -98,11 +98,6 @@ GotoSC027: ; <--LaGwana Email
     data = bolen@lagwana.com
     pasteData(data)
     return
-
-GotoAPOSTRAPHE:
-	data = lagwanaben
-    pasteData(data)
-    return
      
 GotoOPENBRACKET: ; <--Gamer Tag 
 	data = NonlinearFruit
