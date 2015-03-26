@@ -18,17 +18,16 @@ SendMode Input
 ; For the Kidos without an AppsKey, use CapsLock instead
 SetCapsLockState, alwaysoff
 
-; This variable stores which Computer you are using and 
-; loads from the corresponding Homebrewed folders the 
-; Homebrewed Hotkeys
-box = Freud
-
 ; Choose a custom modifier for function keys 
 ; [Note: not alt or win and if null -> AppsKey]
-customModifier = AppsKey
+customModifier = CapsLock
 
 ; Map that modifier to all of the appropriate labels
 dynFunctionMapper(customModifier)
+
+; Computer you're using, should match the folders
+; [EI: Homebrewed %box%]
+box = Freud
 
 /*
 //===================================\\

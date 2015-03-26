@@ -1,70 +1,169 @@
 ------------------------
 Internet -- WinKey -- #
 ------------------------
-#a    --     Insta-(A)HK
+#a::    --     Insta-(A)HK
 
-#b    --     Insta-(B)ible (ESV)
+#b::    --     Insta-(B)ible (ESV)
 
-#d    --     Insta-(D)ictionary
+#d::    --     Insta-(D)ictionary
 
-#f    --     (F)acebook
+#f::    --     (F)acebook
 
-#g    --     Insta-(G)oogle
+#g::    --     Insta-(G)oogle
 
-#i    --     Insta-Google (I)mages
+#i::    --     Insta-Google (I)mages
 
-#m    --     Insta-Google (M)aps
+#m::    --     Insta-Google (M)aps
 
-#r    --     (R)eload
+#r::    --     (R)eload
 
-#s    --     Insta-(S)tackOverFlow
+#s::    --     Insta-(S)tackOverFlow
 
-#t    --     Insta-(T)hesaurus
+#t::    --     Insta-(T)hesaurus
 
-#u    --     Insta-(U)RL
+#u::    --     Insta-(U)RL
 
-#w    --     Insta-(W)ikipedia
+#w::    --     Insta-(W)ikipedia
 
-#y    --     (Y)outube
+#y::    --     (Y)outube
 
-#y    --     Insta-(Y)outube
+#y::    --     Insta-(Y)outube
 
-#z    --     AHK Documentation
+#z::    --     AHK Documentation
 
 ------------------------
   Homebrewed Internet
 ------------------------
-#d    --     Google (D)rive 
+#b::    --     (B)itBucket
 
-#h    --     Git(H)ub 
+#d::    --     Google (D)rive 
 
-#m    --     G(m)ail
+#e::    --     Google (E)mail
 
-------------------------
-Function -- CapsLock
-------------------------
---     Wheel (Up)
+#h::    --     Git(H)ub 
 
---     Wheel (Down)
+#s::    --     (S)qlFiddle
 
---     Beginning of Line and Beginning of Document
+#v::    --    Vertabelo
 
---     End of Line and End of Document
+--------------------------
+Function -- CustomModifier
+--------------------------
+AppsKey
+;---------------------------
 
---     Queuing Paste [(a)nnex]
+GotoUP:    --     Wheel (Up)
 
---     Incremented (C)opy
+Wheel (Up)
+		if(GetKeyState("Shift","p"))
+		{
+			MouseClick, wheelup
+		}
+		else
+		{
+			MouseClick, wheelup
+		}
+		return
+
+GotoDOWN:    --     Wheel (Down)
+
+Wheel (Down)
+		if(GetKeyState("Shift","p"))
+		{
+			MouseClick, wheeldown
+		}
+		else
+		{
+			MouseClick, wheeldown
+		}
+		return
+
+GotoLEFT:    --     Beginning of Line and Beginning of Document
+
+Beginning of Line and Beginning of Document
+		if(GetKeyState("Shift","p"))
+		{
+			Send {CTRL down}{Home}{CTRL up}
+		}
+		else
+		{
+			Send {Home}
+		}
+		return
+
+GotoRIGHT:    --     End of Line and End of Document
+
+End of Line and End of Document
+		if(GetKeyState("Shift","p"))
+		{
+			Send {CTRL down}{End}{CTRL up}
+		}
+		else
+		{
+			Send {End}
+		}
+		return
+
+GotoA:    --     Queuing Paste (a)nnex
+
+Queuing Paste (a)nnex
+		pasteData(qClip%qPasteIndex%)	    ; Paste next item in queue
+		if (qPasteIndex==qCopyIndex)		; Keep qPaste from passing qCopy
+		{
+			qPasteIndex := qCopyIndex-1		; If qPaste=qCopy, qPaste--
+		}
+		else
+		{
+			qPasteIndex := Mod(qPasteIndex+1,111)	; Increment index normally
+		}
+		return
+
+GotoC:    --     Incremented (C)opy
 
 # in the incClip with ~
 		return
 
-CapsLock & e    --     (E)ncompass Paste	
+GotoE:    --     (E)ncompass Paste	
 
---     Encompass Copy [(G)rap]
+(E)ncompass Paste	
+		constants := copySelectedData()
+		StringSplit, constantArray, constants, `,
+		Loop, %constantArray0%
+		{
+			if(constantArray0==1)
+			{
+				StringReplace , encClip, encClip, ~, %constantArray1%, All	; Replace ~ with stuff
+				break
+			}
+			temp := constantArray%a_index%
+			StringReplace , encClip, encClip, ~%a_index%, %temp%, All	; Replace ~1 and ~2 and ~3 ... with stuff
+		}
+		pasteData(encClip)
+		return
 
---     (I)dea Saver
+GotoG:    --     Encompass Copy [(G)rap]
 
---    (K)eystroking Copy Paste
+Encompass Copy [(G)rap]
+		encClip := copySelectedData()
+		return
+
+GotoI:    --     (I)dea Saver
+
+(I)dea Saver
+		if(GetKeyState("Shift","p"))
+		{
+			data := copySelectedData()
+		}
+		else
+		{
+			InputBox, data, Idea Recorder, Please enter your idea, , 200, 100
+		}
+		idea = *%data%`n
+		fileName = ideasDocument.txt
+		fileWriter(idea, fileName)
+		return
+
+GotoK:    --    (K)eystroking Copy Paste
 
 !GetKeyState("Shift","p"))
 		{ ;Copying
@@ -78,9 +177,13 @@ CapsLock & e    --     (E)ncompass Paste
 		}
 		return
 
-CapsLock & l    --     Highlights (L)ine
+GotoL:    --     Highlights (L)ine
 
---     Make Current Window Transparent (Toggle-ish) [(o)paque]
+Highlights (L)ine
+	Send {Home}{Home}{Shift down}{End}{Shift up}
+	return
+
+GotoO:    --     Make Current Window Transparent (Toggle-ish) [(o)paque]
 
 !transLevel) ; Trans Off
 	{
@@ -103,9 +206,15 @@ CapsLock & l    --     Highlights (L)ine
 	WinSet, Transparent, %transLevel%, A
 	return
 
-CapsLock & q    --     (Q)ueuing Copy
+GotoQ:    --     (Q)ueuing Copy
 
---     Always On (T)op (Credit to AppsKey Guy)
+(Q)ueuing Copy
+		qClip%qCopyIndex% := copySelectedData()	; Get the selected data
+		qCopyIndex := Mod(qCopyIndex + 1, 111)	; Increment qCopyIndex (111 being the max of the q)
+		qClip%qCopyIndex% = 					; Set next qClip to be empty
+		return
+
+GotoT:    --     Always On (T)op (Credit to Appskey Guy)
 
 != "† ")
 	      TempText := "† " . TempText ;chr(134)
@@ -119,9 +228,15 @@ CapsLock & q    --     (Q)ueuing Copy
 	WinSetTitle, A, , %TempText%
 	Return
  
-CapsLock & v    --     Incremented Paste
+GotoV:    --     Incremented Paste
 
---     Send Date
+Incremented Paste
+		StringReplace , temp, incClip, ~, %incIndex%	; Replace ~ with index
+		incIndex := incIndex + 1			; Increment index
+		pasteData(temp)						; Pastes the incClip var with updated index
+		return
+
+GotoMINUS:    --     Send Date
 
 !GetKeyState("Shift","p"))
 	{ ; Normal Date (w/o +)
@@ -134,12 +249,61 @@ CapsLock & v    --     Incremented Paste
 	pasteData(date)
 	return
 
-CapsLock & =    --     Send Time 
+GotoPLUS:    --     Send Time 
+
+Send Time 
+      FormatTime, time,, h:mm tt
+      pasteData(time)
+      return
+
+GotoENTER:    --     Jump to end of line then hit enter
 
 ------------------------
   Homebrewed Function
 ------------------------
---     Persisting Copy [(p)ersist]
+;--------------------------------------
+;Homebrewed Functionality - Use CapsLock
+;--------------------------------------
+
+; GotoUP: Wheel up
+
+; GotoDOWN: Wheel down
+
+; GotoLEFT: Beginning of line
+
+; GotoRIGHT: End of line
+
+; GotoA: Queuing Paste (a)nnex
+
+; GotoB:
+
+; GotoC: Incremented (C)opy
+
+; GotoD:
+
+; GotoE: (E)ncompass Paste	
+
+; GotoF: 
+
+; GotoG: Encompass Copy (G)rap
+
+; GotoH:
+
+; GotoI: (I)dea Saver
+
+; GotoJ:
+
+; GotoK: (K)eystroking Copy Paste
+
+; GotoL: Highlight (l)ine
+
+; GotoM:
+
+; GotoN:
+
+; GotoO: Make Current Window Transparent [(o)paque]
+
+GotoP:    --     Persisting Copy [(p)ersist]
 
 !GetKeyState("Shift","p"))
         {   ; If Shift not pressed, Copy
@@ -159,71 +323,110 @@ CapsLock & =    --     Send Time
         }
         return
 
-; CapsLock & q:: (Q)ueuing Copy
+; GotoQ: (Q)ueuing Copy
 
-; CapsLock & r:: 
+; GotoR: 
 
-; CapsLock & s:: Persisting Paste (s)alvage
+; GotoS: Persisting Paste (S)alvage
 
-; CapsLock & t:: Always On (T)op
+; GotoT: Always On (T)op
 
-; CapsLock & u::
+; GotoU:
  
-; CapsLock & v:: Incremented Paste
+; GotoV: Incremented Paste
 
-; CapsLock & w:: 
+; GotoW: 
 
-; CapsLock & x:: 
+; GotoX: 
 
-; CapsLock & y:: 
+; GotoY: 
 
-; CapsLock & z::
+; GotoZ:
 
-CapsLock & ,    --    Official Email
+GotoCOMMA:    --    Official Email
 
---    Personal Email 
+Official Email
+	data = bmbolen2017@spartans.manchester.edu
+    pasteData(data)
+    return
 
---    Username
+GotoPERIOD:    --    Personal Email 
 
---    LaGwana Email
+Personal Email 
+	data = 1123benji5813@gmail.com
+    pasteData(data)
+    return  
 
---    Gamer Tag 
+GotoSLASH:    --    Username
 
---    Hotkey Summarizer
+Username
+	data = bmbolen2017
+    pasteData(data)
+    return
+
+GotoSC027:    --    LaGwana Email
+
+LaGwana Email
+    data = bolen@lagwana.com
+    pasteData(data)
+    return
+     
+GotoOPENBRACKET:    --    Gamer Tag 
+
+Gamer Tag 
+	data = NonlinearFruit
+    pasteData(data)
+    return   
+
+; GotoCLOSEBRACKET:
+
+; GotoBACKSLASH:
+
+; GotoMINUS: Date
+
+; GotoPLUS: Time 
+
+; GotoF1:
+
+GotoF2:    --    Hotkey Summarizer
 
 ------------------------
 Program -- AltKey -- !
 ------------------------
-!d    --     Choose (D)irectory
+!d::    --     Choose (D)irectory
 
-!d    --     Insta-(D)irectory
+!d::    --     Insta-(D)irectory
 
-!n    --     Runs Notepad
+!n::    --     Runs Notepad
 
-!Left    --    Spotify Previous Song 
+!Left::    --    Spotify Previous Song 
 
-!Right    --    Spotify Next Song
+!Right::    --    Spotify Next Song
 
-!UP    --    Spotify Pause
+!UP::    --    Spotify Pause
 
-!Down    --    Spotify Info
+!Down::    --    Spotify Info
 
-!PgUP    --    Spotify Volume Up
+!PgUP::    --    Spotify Volume Up
 
-!PgDn    --    Spotify Volume Down
+!PgDn::    --    Spotify Volume Down
 
-!End    --     Spotify Mute
+!End::    --     Spotify Mute
 
 ------------------------
   Program Homebrewed
 ------------------------
-!c    --     (C)alculator
+!c::    --     (C)alculator
 
-!n    --     (N)etbeans
+!g::    --     (G)it Command Line
 
-!p    --     Cmd (P)rompt
+!n::    --     (N)etbeans
 
-!s    --     (S)ublime Text 2
+!p::    --     Cmd (P)rompt
 
-!t    --     (T)ime Card Folder
+!s::    --     (S)ublime Text 2
+
+!t::    --     (T)ime Card Folder
+
+!u::    --     (U)ltimate Repository Folder
 
