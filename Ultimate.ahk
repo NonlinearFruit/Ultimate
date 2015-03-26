@@ -25,6 +25,10 @@ customModifier = CapsLock
 ; Map that modifier to all of the appropriate labels
 dynFunctionMapper(customModifier)
 
+; Computer you're using, should match the folders
+; [EI: Homebrewed %box%]
+box = Freud
+
 /*
 //===================================\\
 ||                                  ||

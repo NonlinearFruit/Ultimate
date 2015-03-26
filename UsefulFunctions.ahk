@@ -147,14 +147,12 @@ featureRetriever(str)
 ; tt the correct labels
 dynFunctionMapper(modify)
 {
+
 	if(!modify)
-	{ ; Modify is null
+	{ ; modify is null
+		global customModifier = AppsKey
 		modify = AppsKey
 	}
-
-	; ToDo
-	; Map modify plus letters to 
-	; labels (and make the labels)
 
 	if(IsLabel("GotoUP"))
 	{

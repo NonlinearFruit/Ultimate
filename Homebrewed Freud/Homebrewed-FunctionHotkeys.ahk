@@ -115,47 +115,50 @@ GotoOPENBRACKET: ; <--Gamer Tag
 ; GotoF1:
 
 GotoF2: ; <--Hotkey Summarizer
-    fileDeletion("features.txt")
-    path := "C:\Programming\AHK\Ultimates\Scripts\Ultimatev7.6\"
+    if(!A_IsCompiled)
+    {
+        fileDeletion("features.txt")
+        ; path := "C:\Programming\AHK\Ultimates\Scripts\Ultimatev7.6\"
+        path := A_ScriptDir . "\"
 
-    fileWriter("------------------------`n","features.txt")
-    fileWriter("Internet -- WinKey -- #`n","features.txt")
-    fileWriter("------------------------`n","features.txt")
-    file = %path%InternetHotkeys.ahk
-    featureRetriever(fileReader(file))
+        fileWriter("------------------------`n","features.txt")
+        fileWriter("Internet -- WinKey -- #`n","features.txt")
+        fileWriter("------------------------`n","features.txt")
+        file = %path%InternetHotkeys.ahk
+        featureRetriever(fileReader(file))
 
-    fileWriter("------------------------`n","features.txt")
-    fileWriter("  Homebrewed Internet`n","features.txt")
-    fileWriter("------------------------`n","features.txt")
-    file = %path%Homebrewed-InternetHotkeys.ahk
-    featureRetriever(fileReader(file))
+        fileWriter("------------------------`n","features.txt")
+        fileWriter("  Homebrewed Internet`n","features.txt")
+        fileWriter("------------------------`n","features.txt")
+        file = %path%Homebrewed %box%\Homebrewed-InternetHotkeys.ahk
+        featureRetriever(fileReader(file))
 
-    fileWriter("------------------------`n","features.txt")
-    fileWriter("Function -- CapsLock`n","features.txt")
-    fileWriter("------------------------`n","features.txt")
-    file = %path%FunctionHotkeys.ahk
-    featureRetriever(fileReader(file))
+        fileWriter("--------------------------`n","features.txt")
+        fileWriter("Function -- CustomModifier`n","features.txt")
+        fileWriter("--------------------------`n","features.txt")
+        file = %path%FunctionHotkeys.ahk
+        featureRetriever(fileReader(file))
 
-    fileWriter("------------------------`n","features.txt")
-    fileWriter("  Homebrewed Function`n","features.txt")
-    fileWriter("------------------------`n","features.txt")
-    file = %path%Homebrewed-FunctionHotkeys.ahk
-    featureRetriever(fileReader(file))
+        fileWriter("------------------------`n","features.txt")
+        fileWriter("  Homebrewed Function`n","features.txt")
+        fileWriter("------------------------`n","features.txt")
+        file = %path%Homebrewed %box%\Homebrewed-FunctionHotkeys.ahk
+        featureRetriever(fileReader(file))
 
-    fileWriter("------------------------`n","features.txt")
-    fileWriter("Program -- AltKey -- !`n","features.txt")
-    fileWriter("------------------------`n","features.txt")
-    file = %path%ProgramsHotkeys.ahk
-    featureRetriever(fileReader(file))
-    
-    fileWriter("------------------------`n","features.txt")
-    fileWriter("  Program Homebrewed`n","features.txt")
-    fileWriter("------------------------`n","features.txt")
-    file = %path%Homebrewed-ProgramsHotkeys.ahk
-    featureRetriever(fileReader(file))
+        fileWriter("------------------------`n","features.txt")
+        fileWriter("Program -- AltKey -- !`n","features.txt")
+        fileWriter("------------------------`n","features.txt")
+        file = %path%ProgramsHotkeys.ahk
+        featureRetriever(fileReader(file))
+        
+        fileWriter("------------------------`n","features.txt")
+        fileWriter("  Program Homebrewed`n","features.txt")
+        fileWriter("------------------------`n","features.txt")
+        file = %path%Homebrewed %box%\Homebrewed-ProgramsHotkeys.ahk
+        featureRetriever(fileReader(file))
 
-    Run, Notepad features.txt
-
+        Run, Notepad features.txt
+    }
     return
 
 ; GotoF3: find next related

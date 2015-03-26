@@ -20,7 +20,9 @@
 
 ; +#d:: Insta-(D)ictionary
 
-; #e::
+#e:: ; <-- Google (E)mail
+	Run https://mail.google.com/mail/u/0/#inbox
+	return
 
 ; #f:: (F)acebook
 
@@ -42,9 +44,7 @@
 
 ; #l::
 
-#m:: ; <-- G(m)ail
-	Run https://mail.google.com/mail/u/0/#inbox
-	return
+; #m::
 
 ; +#m:: Insta-Google (M)aps
 
