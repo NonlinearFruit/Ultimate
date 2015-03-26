@@ -16,13 +16,15 @@
      
 ; !e::
  
-!f:: ; <--(F)TB
+!f:: ; <-- (F)TB
 	Run C:\Users\Nonlinear Fruit\Documents\Games\Minecraft\FTB.exe
 	return
 
 ; !g::
 
-; !h::  
+!h:: ; <-- Git(H)ub
+	Run "C:\Users\Nonlinear Fruit\AppData\Local\GitHub\GitHub.appref-ms" --open-shell
+	Return 
 
 ; !i::
 

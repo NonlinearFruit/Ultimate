@@ -79,27 +79,27 @@
 
 ; AppsKey & z::
 
-AppsKey & ,:: ; <--Official Email
+AppsKey & ,:: ; <-- Official Email
 	data = bmbolen2017@spartans.manchester.edu
     pasteData(data)
     return
 
-AppsKey & .:: ; <--Personal Email 
+AppsKey & .:: ; <-- Personal Email 
 	data = 1123benji5813@gmail.com
     pasteData(data)
     return  
 
-AppsKey & /:: ; <--Username
+AppsKey & /:: ; <-- Username
 	data = bmbolen2017
     pasteData(data)
     return
 
-AppsKey & ':: ; <--Username
+AppsKey & ':: ; <-- Username
 	data = bbolen@muspartans
     pasteData(data)
     return
      
-AppsKey & [:: ; <--Gamer Tag 
+AppsKey & [:: ; <-- Gamer Tag 
 	data = NonlinearFruit
     pasteData(data)
     return   
@@ -114,9 +114,9 @@ AppsKey & [:: ; <--Gamer Tag
 
 ; AppsKey & F1::
 
-AppsKey & F2:: ; <--Hotkey Summarizer
+AppsKey & F2:: ; <-- Hotkey Summarizer
     fileDeletion("features.txt")
-    path := "C:\Users\Nonlinear Fruit\Documents\Programming\AHK\Ultimates\Script\Ultimatev7.5\"
+    path := "C:\Users\Nonlinear Fruit\Documents\Programming\AHK\Ultimates\Ultimate\Ultimate\"
 
     fileWriter("------------------------`n","features.txt")
     fileWriter("Internet -- WinKey -- #`n","features.txt")
@@ -127,7 +127,7 @@ AppsKey & F2:: ; <--Hotkey Summarizer
     fileWriter("------------------------`n","features.txt")
     fileWriter("  Homebrewed Internet`n","features.txt")
     fileWriter("------------------------`n","features.txt")
-    file = %path%Homebrewed-InternetHotkeys.ahk
+    file = %path%Homebrewed Laptop\Homebrewed-InternetHotkeys.ahk
     featureRetriever(fileReader(file))
 
     fileWriter("------------------------`n","features.txt")
@@ -139,7 +139,7 @@ AppsKey & F2:: ; <--Hotkey Summarizer
     fileWriter("------------------------`n","features.txt")
     fileWriter("  Homebrewed Function`n","features.txt")
     fileWriter("------------------------`n","features.txt")
-    file = %path%Homebrewed-FunctionHotkeys.ahk
+    file = %path%Homebrewed Laptop\Homebrewed-FunctionHotkeys.ahk
     featureRetriever(fileReader(file))
 
     fileWriter("------------------------`n","features.txt")
@@ -151,7 +151,7 @@ AppsKey & F2:: ; <--Hotkey Summarizer
     fileWriter("------------------------`n","features.txt")
     fileWriter("  Program Homebrewed`n","features.txt")
     fileWriter("------------------------`n","features.txt")
-    file = %path%Homebrewed-ProgramsHotkeys.ahk
+    file = %path%Homebrewed Laptop\Homebrewed-ProgramsHotkeys.ahk
     featureRetriever(fileReader(file))
 
     Run, Notepad features.txt

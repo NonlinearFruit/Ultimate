@@ -129,7 +129,7 @@
     Send %filePath% 
     return
 	
-<!n:: ; <-- Runs Notepad
+<!n:: ; <-- (N)otepad
 	Run Notepad
 	return
 
@@ -145,69 +145,58 @@
 SetTitleMatchMode 2 
 
 ; "ALT + LEFT"  for previous 
-!Left:: ; <--Spotify Previous Song 
-DetectHiddenWindows, On 
-ControlSend, ahk_parent, ^{Left}, ahk_class SpotifyMainWindow 
-DetectHiddenWindows, Off 
-return 
+!Left:: ; <-- Spotify Previous Song 
+	DetectHiddenWindows, On 
+	ControlSend, ahk_parent, ^{Left}, ahk_class SpotifyMainWindow 
+	DetectHiddenWindows, Off 
+	return 
 
 
 ; "ALT + RIGHT"  for next 
-!Right:: ; <--Spotify Next Song
-{ 
-DetectHiddenWindows, On 
-ControlSend, ahk_parent, ^{Right}, ahk_class SpotifyMainWindow 
-DetectHiddenWindows, Off 
-return 
-} 
+!Right:: ; <-- Spotify Next Song
+	DetectHiddenWindows, On 
+	ControlSend, ahk_parent, ^{Right}, ahk_class SpotifyMainWindow 
+	DetectHiddenWindows, Off 
+	return 
+
 
 ; "ALT + UP"  for pause
-!UP:: ; <--Spotify Pause
-{ 
-DetectHiddenWindows, On 
-ControlSend, ahk_parent, {space}, ahk_class SpotifyMainWindow 
-DetectHiddenWindows, Off 
-return 
-} 
+!UP:: ; <-- Spotify Pause 
+	DetectHiddenWindows, On 
+	ControlSend, ahk_parent, {space}, ahk_class SpotifyMainWindow 
+	DetectHiddenWindows, Off 
+	return 
 
 ; "ALT + DOWN"  for info 
-!Down:: ; <--Spotify Info
-{ 
-DetectHiddenWindows, On 
-SetTitleMatchMode 2 
-WinGetTitle, now_playing, ahk_class SpotifyMainWindow 
-StringTrimLeft, playing, now_playing, 10 
-DetectHiddenWindows, Off 
-clipboard = %playing%`r`n
-return 
-} 
+!Down:: ; <-- Spotify Info
+	DetectHiddenWindows, On 
+	SetTitleMatchMode 2 
+	WinGetTitle, now_playing, ahk_class SpotifyMainWindow 
+	StringTrimLeft, playing, now_playing, 10 
+	DetectHiddenWindows, Off 
+	clipboard = %playing%`r`n
+	return 
 
 ; "ALT + PAGE UP"  for volume up
-!PgUP:: ; <--Spotify Volume Up
-{ 
-DetectHiddenWindows, On 
-ControlSend, ahk_parent, ^{Up}, ahk_class SpotifyMainWindow 
-DetectHiddenWindows, Off 
-return 
-} 
+!PgUP:: ; <-- Spotify Volume Up
+	DetectHiddenWindows, On 
+	ControlSend, ahk_parent, ^{Up}, ahk_class SpotifyMainWindow 
+	DetectHiddenWindows, Off 
+	return 
 
 ; "ALT + PAGE DOWN"  for volume down
-!PgDn:: ; <--Spotify Volume Down
-{ 
-DetectHiddenWindows, On 
-ControlSend, ahk_parent, ^{Down}, ahk_class SpotifyMainWindow 
-DetectHiddenWindows, Off 
-return 
-} 
+!PgDn:: ; <-- Spotify Volume Down
+	DetectHiddenWindows, On 
+	ControlSend, ahk_parent, ^{Down}, ahk_class SpotifyMainWindow 
+	DetectHiddenWindows, Off 
+	return 
 
 ; "ALT + END"  for mute
 !End:: ; <-- Spotify Mute
-{ 
-DetectHiddenWindows, On 
-ControlSend, ahk_parent, ^+{Down}, ahk_class SpotifyMainWindow 
-DetectHiddenWindows, Off 
-return 
-}
+	DetectHiddenWindows, On 
+	ControlSend, ahk_parent, ^+{Down}, ahk_class SpotifyMainWindow 
+	DetectHiddenWindows, Off 
+	return 
 
 
 ;---------------------------------------------------------------------------------------------------------

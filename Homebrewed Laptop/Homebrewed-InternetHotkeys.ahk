@@ -2,7 +2,7 @@
 ;Homebrewed Websites - Use Win Key
 ;---------------------------------
 
-#a:: ; <--Documentary(A)ddict
+#a:: ; <-- Documentary(A)ddict
 	Run http://www.documentaryaddict.com/
 	return
 
@@ -14,13 +14,13 @@
 
 ; #c::
 
-#d:: ; <--(D)2L 
+#d:: ; <-- (D)2L 
 	Run https://d2l.manchester.edu/
 	return
 
 ; +#d:: Insta-(D)ictionary
 
-#e:: ; <--Project (E)uler
+#e:: ; <-- Project (E)uler
 	Run www.projecteuler.net
 	return
 
@@ -30,7 +30,9 @@
 
 ; +#g:: Insta-(G)oogle
 
-; #h::
+#h:: ; <-- Git(H)ub 
+	Run https://github.com/NonlinearFruit
+	Return 
 
 ; #i::
 
