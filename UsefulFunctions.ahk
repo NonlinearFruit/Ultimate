@@ -147,323 +147,330 @@ featureRetriever(str)
 ; tt the correct labels
 dynFunctionMapper(modify)
 {
-	; MsgBox, , Title, %modify%
+	if(!modify)
+	{ ; Modify is null
+		modify = AppsKey
+	}
 
 	; ToDo
 	; Map modify plus letters to 
 	; labels (and make the labels)
 
-	if(IsLabel(GotoUP))
+	if(IsLabel("GotoUP"))
 	{
 		key := " & up"
-		Hotkey, %modify%.%key%, GotoUP
+		Hotkey, %modify% %key%, GotoUP
 	}
 
-	if(IsLabel(GotoDOWN))
+	if(IsLabel("GotoDOWN"))
 	{
 		key := " & down"
-		Hotkey, %modify%.%key%, GotoDOWN
+		Hotkey, %modify% %key%, GotoDOWN
 	}
 
-	if(IsLabel(GotoLEFT))
+	if(IsLabel("GotoLEFT"))
 	{
 		key := " & left"
-		Hotkey, %modify%.%key%, GotoLEFT
+		Hotkey, %modify% %key%, GotoLEFT
 	}
 
-	if(IsLabel(GotoRIGHT))
+	if(IsLabel("GotoRIGHT"))
 	{
 		key := " & right"
-		Hotkey, %modify%.%key%, GotoRIGHT
+		Hotkey, %modify% %key%, GotoRIGHT
 	}
 
-	if(IsLabel(GotoA))
+	if(IsLabel("GotoA"))
 	{
 		key := " & a"
-		Hotkey, %modify%.%key%, GotoA
+		Hotkey, %modify% %key%, GotoA
 	}
 
-	if(IsLabel(GotoB))
+	if(IsLabel("GotoB"))
 	{
 		key := " & b"
-		Hotkey, %modify%.%key%, GotoB
+		Hotkey, %modify% %key%, GotoB
 	}
 
-	if(IsLabel(GotoC))
+	if(IsLabel("GotoC"))
 	{
 		key := " & c"
-		Hotkey, %modify%.%key%, GotoC
+		Hotkey, %modify% %key%, GotoC
 	}
 
-	if(IsLabel(GotoD))
+	if(IsLabel("GotoD"))
 	{
 		key := " & d"
-		Hotkey, %modify%.%key%, GotoD
+		Hotkey, %modify% %key%, GotoD
 	}
 
-	if(IsLabel(GotoE))
+	if(IsLabel("GotoE"))
 	{
 		key := " & e"
-		Hotkey, %modify%.%key%, GotoE
+		Hotkey, %modify% %key%, GotoE
 	}
 
-	if(IsLabel(GotoF))
+	if(IsLabel("GotoF"))
 	{
 		key := " & f"
-		Hotkey, %modify%.%key%, GotoF
+		Hotkey, %modify% %key%, GotoF
 	}
 
-	if(IsLabel(GotoG))
+	if(IsLabel("GotoG"))
 	{
 		key := " & g"
-		Hotkey, %modify%.%key%, GotoG
+		Hotkey, %modify% %key%, GotoG
 	}
 
-	if(IsLabel(GotoH))
+	if(IsLabel("GotoH"))
 	{
 		key := " & h"
-		Hotkey, %modify%.%key%, GotoH
+		Hotkey, %modify% %key%, GotoH
 	}
 
-	if(IsLabel(GotoI))
+	if(IsLabel("GotoI"))
 	{
 		key := " & i"
-		Hotkey, %modify%.%key%, GotoI
+		Hotkey, %modify% %key%, GotoI
 	}
 
-	if(IsLabel(GotoJ))
+	if(IsLabel("GotoJ"))
 	{
 		key := " & j"
-		Hotkey, %modify%.%key%, GotoJ
+		Hotkey, %modify% %key%, GotoJ
 	}
 
-	if(IsLabel(GotoK))
+	if(IsLabel("GotoK"))
 	{
 		key := " & k"
-		Hotkey, %modify%.%key%, GotoK
+		Hotkey, %modify% %key%, GotoK
 	}
 
-	if(IsLabel(GotoL))
+	if(IsLabel("GotoL"))
 	{
 		key := " & l"
-		Hotkey, %modify%.%key%, GotoL
+		Hotkey, %modify% %key%, GotoL
 	}
 
-	if(IsLabel(GotoM))
+	if(IsLabel("GotoM"))
 	{
 		key := " & m"
-		Hotkey, %modify%.%key%, GotoM
+		Hotkey, %modify% %key%, GotoM
 	}
 
-	if(IsLabel(GotoN))
+	if(IsLabel("GotoN"))
 	{
 		key := " & n"
-		Hotkey, %modify%.%key%, GotoN
+		Hotkey, %modify% %key%, GotoN
 	}
 
-	if(IsLabel(GotoO))
+	if(IsLabel("GotoO"))
 	{
 		key := " & o"
-		Hotkey, %modify%.%key%, GotoO
+		Hotkey, %modify% %key%, GotoO
 	}
 
-	if(IsLabel(GotoP))
+	if(IsLabel("GotoP"))
 	{
 		key := " & p"
-		Hotkey, %modify%.%key%, GotoP
+		Hotkey, %modify% %key%, GotoP
 	}
 
-	if(IsLabel(GotoQ))
+	if(IsLabel("GotoQ"))
 	{
 		key := " & q"
-		Hotkey, %modify%.%key%, GotoQ
+		Hotkey, %modify% %key%, GotoQ
 	}
 
-	if(IsLabel(GotoR))
+	if(IsLabel("GotoR"))
 	{
 		key := " & r"
-		Hotkey, %modify%.%key%, GotoR
+		Hotkey, %modify% %key%, GotoR
 	}
 
-	if(IsLabel(GotoS))
+	if(IsLabel("GotoS"))
 	{
 		key := " & s"
-		Hotkey, %modify%.%key%, GotoS
+		Hotkey, %modify% %key%, GotoS
 	}
 
-	if(IsLabel(GotoT))
+	if(IsLabel("GotoT"))
 	{
 		key := " & t"
-		Hotkey, %modify%.%key%, GotoT
+		Hotkey, %modify% %key%, GotoT
 	}
 
-	if(IsLabel(GotoU))
+	if(IsLabel("GotoU"))
 	{
 		key := " & u"
-		Hotkey, %modify%.%key%, GotoU
+		Hotkey, %modify% %key%, GotoU
 	}
 
-	if(IsLabel(GotoV))
+	if(IsLabel("GotoV"))
 	{
 		key := " & v"
-		Hotkey, %modify%.%key%, GotoV
+		Hotkey, %modify% %key%, GotoV
 	}
 
-	if(IsLabel(GotoW))
+	if(IsLabel("GotoW"))
 	{
 		key := " & w"
-		Hotkey, %modify%.%key%, GotoW
+		Hotkey, %modify% %key%, GotoW
 	}
 
-	if(IsLabel(GotoX))
+	if(IsLabel("GotoX"))
 	{
 		key := " & x"
-		Hotkey, %modify%.%key%, GotoX
+		Hotkey, %modify% %key%, GotoX
 	}
 
-	if(IsLabel(GotoY))
+	if(IsLabel("GotoY"))
 	{
 		key := " & y"
-		Hotkey, %modify%.%key%, GotoY
+		Hotkey, %modify% %key%, GotoY
 	}
 
-	if(IsLabel(GotoZ))
+	if(IsLabel("GotoZ"))
 	{
 		key := " & z"
-		Hotkey, %modify%.%key%, GotoZ
+		Hotkey, %modify% %key%, GotoZ
 	}
 
 	if(IsLabel("GotoCOMMA"))
 	{
-		key := " & ,"
-		Hotkey, %modify%.%key%, "GotoCOMMA"
+		key := " &  `,"
+		Hotkey, %modify% %key%, GotoCOMMA
 	}
 
-	if(IsLabel(GotoPERIOD))
+	if(IsLabel("GotoPERIOD"))
 	{
 		key := " & ."
-		Hotkey, %modify%.%key%, GotoPERIOD
+		Hotkey, %modify% %key%, GotoPERIOD
 	}
 
-	if(IsLabel(GotoSLASH))
+	if(IsLabel("GotoSLASH"))
 	{
 		key := " & /"
-		Hotkey, %modify%.%key%, GotoSLASH
+		Hotkey, %modify% %key%, GotoSLASH
 	}
 
-	if(IsLabel(GotoSC027))
+	if(IsLabel("GotoSC027"))
 	{
 		key := " & sc027"
-		Hotkey, %modify%.%key%, GotoSC027
+		Hotkey, %modify% %key%, GotoSC027
 	}
 
-	if(IsLabel(GotoAPOSTRAPHE))
+	if(IsLabel("GotoAPOSTRAPHE"))
 	{
 		key := " & '"
-		Hotkey, %modify%.%key%, GotoAPOSTRAPHE
+		Hotkey, %modify% %key%, GotoAPOSTRAPHE
 	}
 
-	if(IsLabel(GotoOPENBRACKET))
+	if(IsLabel("GotoOPENBRACKET"))
 	{
 		key := " & ["
-		Hotkey, %modify%.%key%, GotoOPENBRACKET
+		Hotkey, %modify% %key%, GotoOPENBRACKET
 	}
 
-	if(IsLabel(GotoCLOSEBRACKET))
+	if(IsLabel("GotoCLOSEBRACKET"))
 	{
 		key := " & ]"
-		Hotkey, %modify%.%key%, GotoCLOSEBRACKET
+		Hotkey, %modify% %key%, GotoCLOSEBRACKET
 	}
 
-	if(IsLabel(GotoBACKSLASH))
+	if(IsLabel("GotoBACKSLASH"))
 	{
 		key := " & \"
-		Hotkey, %modify%.%key%, GotoBACKSLASH
+		Hotkey, %modify% %key%, GotoBACKSLASH
 	}
 
-	if(IsLabel(GotoMINUS))
+	if(IsLabel("GotoMINUS"))
 	{
 		key := " & -"
-		Hotkey, %modify%.%key%, GotoMINUS
+		Hotkey, %modify% %key%, GotoMINUS
 	}
 
-	if(IsLabel(GotoPLUS))
+	if(IsLabel("GotoPLUS"))
 	{
 		key := " & ="
-		Hotkey, %modify%.%key%, GotoPLUS
+		Hotkey, %modify% %key%, GotoPLUS
 	}
 
-	if(IsLabel(GotoF1))
+	if(IsLabel("GotoENTER"))
+	{
+		key := " & Enter"
+		Hotkey, %modify% %key%, GotoENTER
+	}
+
+	if(IsLabel("GotoF1"))
 	{
 		key := " & f1"
-		Hotkey, %modify%.%key%, GotoF1
+		Hotkey, %modify% %key%, GotoF1
 	}
 
-	if(IsLabel(GotoF2))
+	if(IsLabel("GotoF2"))
 	{
 		key := " & f2"
-		Hotkey, %modify%.%key%, GotoF2
+		Hotkey, %modify% %key%, GotoF2
 	}
 
-	if(IsLabel(GotoF3))
+	if(IsLabel("GotoF3"))
 	{
 		key := " & f3"
-		Hotkey, %modify%.%key%, GotoF3
+		Hotkey, %modify% %key%, GotoF3
 	}
 
-	t := IsLabel("GotoCOMMA")
-	MsgBox, , Title, %t%
-	if(IsLabel(GotoF4))
+	if(IsLabel("GotoF4"))
 	{
 		key := " & f4"
-		Hotkey, %modify%.%key%, GotoF4
+		Hotkey, %modify% %key%, GotoF4
 	}
 
-	if(IsLabel(GotoF5))
+	if(IsLabel("GotoF5"))
 	{
 		key := " & f5"
-		Hotkey, %modify%.%key%, GotoF5
+		Hotkey, %modify% %key%, GotoF5
 	}
 
-	if(IsLabel(GotoF6))
+	if(IsLabel("GotoF6"))
 	{
 		key := " & f6"
-		Hotkey, %modify%.%key%, GotoF6
+		Hotkey, %modify% %key%, GotoF6
 	}
 
-	if(IsLabel(GotoF7))
+	if(IsLabel("GotoF7"))
 	{
 		key := " & f7"
-		Hotkey, %modify%.%key%, GotoF7
+		Hotkey, %modify% %key%, GotoF7
 	}
 
-	if(IsLabel(GotoF8))
+	if(IsLabel("GotoF8"))
 	{
 		key := " & f8"
-		Hotkey, %modify%.%key%, GotoF8
+		Hotkey, %modify% %key%, GotoF8
 	}
 
-	if(IsLabel(GotoF9))
+	if(IsLabel("GotoF9"))
 	{
 		key := " & f9"
-		Hotkey, %modify%.%key%, GotoF9
+		Hotkey, %modify% %key%, GotoF9
 	}
 
-	if(IsLabel(GotoF10))
+	if(IsLabel("GotoF10"))
 	{
 		key := " & f10"
-		Hotkey, %modify%.%key%, GotoF10
+		Hotkey, %modify% %key%, GotoF10
 	}
 
-	if(IsLabel(GotoF11))
+	if(IsLabel("GotoF11"))
 	{
 		key := " & f11"
-		Hotkey, %modify%.%key%, GotoF11
+		Hotkey, %modify% %key%, GotoF11
 	}
 
-	if(IsLabel(GotoF12))
+	if(IsLabel("GotoF12"))
 	{
 		key := " & f12"
-		Hotkey, %modify%.%key%, GotoF12
+		Hotkey, %modify% %key%, GotoF12
 	}
 }

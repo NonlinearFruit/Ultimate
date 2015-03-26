@@ -2,7 +2,7 @@
 ;Functionality - Use AppsKey
 ;---------------------------
 
-AppsKey & Up:: ; <-- Wheel (Up)
+GotoUP: ; <-- Wheel (Up)
 		if(GetKeyState("Shift","p"))
 		{
 			MouseClick, wheelup
@@ -13,7 +13,7 @@ AppsKey & Up:: ; <-- Wheel (Up)
 		}
 		return
 
-AppsKey & Down:: ; <-- Wheel (Down)
+GotoDOWN: ; <-- Wheel (Down)
 		if(GetKeyState("Shift","p"))
 		{
 			MouseClick, wheeldown
@@ -24,7 +24,7 @@ AppsKey & Down:: ; <-- Wheel (Down)
 		}
 		return
 
-AppsKey & Left:: ; <-- Beginning of Line and Beginning of Document
+GotoLEFT: ; <-- Beginning of Line and Beginning of Document
 		if(GetKeyState("Shift","p"))
 		{
 			Send {CTRL down}{Home}{CTRL up}
@@ -35,7 +35,7 @@ AppsKey & Left:: ; <-- Beginning of Line and Beginning of Document
 		}
 		return
 
-AppsKey & Right:: ; <-- End of Line and End of Document
+GotoRIGHT: ; <-- End of Line and End of Document
 		if(GetKeyState("Shift","p"))
 		{
 			Send {CTRL down}{End}{CTRL up}
@@ -46,7 +46,7 @@ AppsKey & Right:: ; <-- End of Line and End of Document
 		}
 		return
 
-AppsKey & a:: ; <-- Queuing Paste (a)nnex
+GotoA: ; <-- Queuing Paste (a)nnex
 		pasteData(qClip%qPasteIndex%)	    ; Paste next item in queue
 		if (qPasteIndex==qCopyIndex)		; Keep qPaste from passing qCopy
 		{
@@ -58,7 +58,7 @@ AppsKey & a:: ; <-- Queuing Paste (a)nnex
 		}
 		return
 
-AppsKey & c:: ; <-- Incremented (C)opy
+GotoC: ; <-- Incremented (C)opy
 		; Issue with pasting before copying is done!!!
 		
 		incClip := copySelectedData()		; Save incClip
@@ -83,7 +83,7 @@ AppsKey & c:: ; <-- Incremented (C)opy
 		StringReplace , incClip, incClip, ~%incIndex%, ~	; Replace ~# in the incClip with ~
 		return
 
-AppsKey & e:: ; <-- (E)ncompass Paste	
+GotoE: ; <-- (E)ncompass Paste	
 		constants := copySelectedData()
 		StringSplit, constantArray, constants, `,
 		Loop, %constantArray0%
@@ -99,11 +99,11 @@ AppsKey & e:: ; <-- (E)ncompass Paste
 		pasteData(encClip)
 		return
 
-AppsKey & g:: ; <-- Encompass Copy [(G)rap]
+GotoG: ; <-- Encompass Copy [(G)rap]
 		encClip := copySelectedData()
 		return
 
-AppsKey & i:: ; <-- (I)dea Saver
+GotoI: ; <-- (I)dea Saver
 		if(GetKeyState("Shift","p"))
 		{
 			data := copySelectedData()
@@ -117,7 +117,7 @@ AppsKey & i:: ; <-- (I)dea Saver
 		fileWriter(idea, fileName)
 		return
 
-AppsKey & k:: ; <--(K)eystroking Copy Paste
+GotoK: ; <--(K)eystroking Copy Paste
 	if(!GetKeyState("Shift","p"))
 		{ ;Copying
 			Run, Notepad KeystrokeCopyPaste.txt
@@ -130,11 +130,11 @@ AppsKey & k:: ; <--(K)eystroking Copy Paste
 		}
 		return
 
-AppsKey & l:: ; <-- Highlights (L)ine
+GotoL: ; <-- Highlights (L)ine
 	Send {Home}{Home}{Shift down}{End}{Shift up}
 	return
 
-AppsKey & o:: ; <-- Make Current Window Transparent (Toggle-ish) [(o)paque]
+GotoO: ; <-- Make Current Window Transparent (Toggle-ish) [(o)paque]
 	WinGet, transLevel, Transparent, A
 	if (!transLevel) ; Trans Off
 	{
@@ -157,13 +157,13 @@ AppsKey & o:: ; <-- Make Current Window Transparent (Toggle-ish) [(o)paque]
 	WinSet, Transparent, %transLevel%, A
 	return
 
-AppsKey & q:: ; <-- (Q)ueuing Copy
+GotoQ: ; <-- (Q)ueuing Copy
 		qClip%qCopyIndex% := copySelectedData()	; Get the selected data
 		qCopyIndex := Mod(qCopyIndex + 1, 111)	; Increment qCopyIndex (111 being the max of the q)
 		qClip%qCopyIndex% = 					; Set next qClip to be empty
 		return
 
-Appskey & t:: ; <-- Always On (T)op (Credit to Appskey Guy)
+GotoT: ; <-- Always On (T)op (Credit to Appskey Guy)
 	WinGetTitle, TempText, A
 	if(!GetKeyState("Shift","p"))
 	{
@@ -180,13 +180,13 @@ Appskey & t:: ; <-- Always On (T)op (Credit to Appskey Guy)
 	WinSetTitle, A, , %TempText%
 	Return
  
-AppsKey & v:: ; <-- Incremented Paste
+GotoV: ; <-- Incremented Paste
 		StringReplace , temp, incClip, ~, %incIndex%	; Replace ~ with index
 		incIndex := incIndex + 1			; Increment index
 		pasteData(temp)						; Pastes the incClip var with updated index
 		return
 
-AppsKey & -:: ; <-- Send Date
+GotoMINUS: ; <-- Send Date
       if(!GetKeyState("Shift","p"))
 	{ ; Normal Date (w/o +)
 		FormatTime, date,, MM/dd/yy
@@ -198,12 +198,12 @@ AppsKey & -:: ; <-- Send Date
 	pasteData(date)
 	return
 
-AppsKey & =:: ; <-- Send Time 
+GotoPLUS: ; <-- Send Time 
       FormatTime, time,, h:mm tt
       pasteData(time)
       return
 
-AppsKey & Enter:: ; <-- Jump to end of line then hit enter
+GotoENTER: ; <-- Jump to end of line then hit enter
 	Send {End}
 	Send {Enter}
 	return

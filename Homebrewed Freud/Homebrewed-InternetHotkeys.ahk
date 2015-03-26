@@ -10,10 +10,6 @@
 	Run https://bitbucket.org/
 	Return
 
-^#b:: 
-	Send R}>j98o8fuy*#TW2bB
-	Return
-
 ; +#b:: Insta-(B)ible (ESV)
 
 ; #c::
