@@ -91,9 +91,13 @@ qCopyPasteGlobals()
 ; Takes the Hotkeys and their Comments and puts them in the features.txt
 featureRetriever(str)
 {   
+	; Make sure modify exists globally, if not set it to AppsKey by default
+	global
+	if(!modify)
+		modify = AppsKey
 	; Look for the first iconic pattern indicating a hotkey
 	; within this string 
-	needle := ":: `; <--"
+	needle := ": `; <--"
 	colons := InStr(str,needle)
 	; Go from the beginning of str, to this pattern,
 	; call that part 'labrat'
@@ -123,37 +127,28 @@ featureRetriever(str)
 		; Start at i, go for length j
 		temp := SubStr(labrat, i, j)
 
-		; exist if temp adsorbs a #
-		if(InStr(temp, "#")!=0)
-		{
-			hk := temp
+		; exit if temp adsorbs a # or ! or AppsKey
+		if( InStr(temp, "#")!=0 or InStr(temp, "!")!=0 or InStr(temp, "AppsKey")!=0 )
+		{	
+			; ignore the colon we had to include for the Goto:'s
+			hk := SubStr(temp,1,StrLen(temp)-1)
+
 			if(SubStr(labrat, i-1, 1)=="+")
 			{ ; The next charact in labrat was shift, so add that
 				hk = +%hk%
 			}
 			break
 		}
-		; exist if temp adsorbs a !
-		if(InStr(temp, "!")!=0)
-		{
-			hk := temp
-			if(SubStr(labrat, i-1, 1)=="+")
-			{ ; The next charact in labrat was shift, so add that
-				hk = +%hk%
-			}
+
+		; exit if temp absords a Goto
+		if(InStr(temp, "Goto")!=0)
+		{	
+			;ignore the Goto part of the command
+			hk := modify . " & " . SubStr(temp, 5)
 			break
 		}
-		; exist if temp adsorbs a AppsKey (or equivalent)
-		if(InStr(temp, "AppsKey")!=0)
-		{
-			hk := temp
-			if(SubStr(labrat, i-1, 1)=="+")
-			{ ; The next charact in labrat was shift, so add that
-				hk = +%hk%
-			}
-			break
-		}
-		; exist if temp eats all of labrat and doesn't find 
+
+		; exit if temp eats all of labrat and doesn't find 
 		; the key phrases
 		if(i=1)
 		{
@@ -165,7 +160,7 @@ featureRetriever(str)
 	; documentation for that hotkey, so get the position of the first enter
 	posOfEnter := InStr(str, "`n")
 	if(posOfEnter!=0)
-	{ ; the position exists!, create the documentation
+	{ ; the position exits!, create the documentation
 		temp := SubStr(str, 1, posOfEnter)
 		doc := temp
 	}
@@ -173,7 +168,7 @@ featureRetriever(str)
 	; Format the hotkey and documentation
 
 	; Largest sized hotkey (this is used to unify spacing)
-	hkSpace := 16 ;CapsLock & Enter
+	hkSpace := 22 ;CapsLock & OpenBracket
 	; Number of white spaces that need added to hk
 	numWhite := hkSpace - StrLen(hk)
 	Loop, %numWhite%
@@ -192,15 +187,9 @@ featureRetriever(str)
 ; Take the given modifier and maps 
 ; the function hotkeys w/ that modifier 
 ; tt the correct labels
-dynFunctionMapper(modify)
+dynFunctionMapper()
 {
-
-	if(!modify)
-	{ ; modify is null
-		global customModifier = AppsKey
-		modify = AppsKey
-	}
-
+	global
 	if(IsLabel("GotoUP"))
 	{
 		key := " & up"

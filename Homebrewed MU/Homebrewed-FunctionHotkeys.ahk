@@ -1,51 +1,51 @@
-;--------------------------------------
-;Homebrewed Functionality - Use AppsKey
-;--------------------------------------
+;------------------------------------------
+;Homebrewed Functionality - Use Dynamic Key
+;------------------------------------------
 
-; AppsKey & Up:: Wheel up
+; GotoUP: Wheel up
 
-; AppsKey & Down:: Wheel down
+; GotoDOWN: Wheel down
 
-; AppsKey & Left:: Beginning of line
+; GotoLEFT: Beginning of line
 
-; AppsKey & Right:: End of line
+; GotoRIGHT: End of line
 
-; AppsKey & a::	Queuing Paste (a)nnex
+; GotoA: Queuing Paste (a)nnex
 
-; AppsKey & b::
+; GotoB:
 
-; AppsKey & c:: Incremented (C)opy
+; GotoC: Incremented (C)opy
 
-; AppsKey & d::
+; GotoD:
 
-; AppsKey & e:: (E)ncompass Paste	
+; GotoE: (E)ncompass Paste  
 
-; AppsKey & f:: 
+; GotoF: 
 
-; AppsKey & g:: Encompass Copy (G)rap
+; GotoG: Encompass Copy (G)rap
 
-; AppsKey & h::
+; GotoH:
 
-; AppsKey & i:: (I)dea Saver
+; GotoI: (I)dea Saver
 
-; AppsKey & j::
+; GotoJ:
 
-; AppsKey & k:: 
+; GotoK: (K)eystroking Copy Paste
 
-; AppsKey & l:: Highlight line
+; GotoL: Highlight (l)ine
 
-; AppsKey & m::
+; GotoM:
 
-; AppsKey & n::
+; GotoN:
 
-; AppsKey & o:: Make Current Window Transparent (o)paque
+; GotoO: Make Current Window Transparent [(o)paque]
 
-AppsKey & p:: ; <-- Persisting Copy (persist)
+GotoP: ; <-- Persisting Copy [(p)ersist]
         if(!GetKeyState("Shift","p"))
         {   ; If Shift not pressed, Copy
             data := copySelectedData()          ; Get selected text
                                                 ; Set where to persist text
-            fileName = \\cratus\students\JMBolen2017\persistantCopyPaste.txt    
+            fileName = C:\Programming\AHK\Ultimates\Scripts\Ultimatev7.6\persistantCopyPaste.txt    
             fileDeletion(fileName)              ; Delete old text
             fileWriter(data,fileName)           ; Persist new text
         }
@@ -53,86 +53,86 @@ AppsKey & p:: ; <-- Persisting Copy (persist)
         {   ; If Shift pressed, Paste
             data := copySelectedData()          ; Get selected text
                                                 ; Set where to persist text
-            fileName = \\cratus\students\JMBolen2017\persistantCopyPaste.txt    
+            fileName = C:\Programming\AHK\Ultimates\Scripts\Ultimatev7.6\persistantCopyPaste.txt    
             fileDeletion(fileName)              ; Delete old text
             fileWriter(data,fileName)           ; Persist new text
         }
         return
 
-; AppsKey & q:: (Q)ueuing Copy
+; GotoQ: (Q)ueuing Copy
 
-; AppsKey & r:: 
+; GotoR: 
 
-; AppsKey & s:: (S)creen Saver
+; GotoS: (S)creen Saver
 
-; Appskey & t:: Always On (T)op
+; GotoT: Always On (T)op
 
-; AppsKey & u::
+; GotoU:
  
-; AppsKey & v:: Incremented Paste
+; GotoV: Incremented Paste
 
-; AppsKey & w:: 
+; GotoW: 
 
-; AppsKey & x:: 
+; GotoX: 
 
-; AppsKey & y:: 
+; GotoY: 
 
-; AppsKey & z::
+; GotoZ:
 
-AppsKey & ,:: ; <--Official Email
-	data = bmbolen2017@spartans.manchester.edu
+GotoCOMMA: ; <--Official Email
+    data = bmbolen2017@spartans.manchester.edu
     pasteData(data)
     return
 
-AppsKey & .:: ; <--Personal Email 
-	data = 1123benji5813@gmail.com
+GotoPERIOD: ; <--Personal Email 
+    data = 1123benji5813@gmail.com
     pasteData(data)
     return  
 
-AppsKey & /:: ; <--Username
-	data = bmbolen2017
+GotoSLASH: ; <--Username
+    data = bmbolen2017
     pasteData(data)
     return
 
-AppsKey & ':: ; <--Username
-	data = bbolen@muspartans
+GotoSC027: ; <--LaGwana Email
+    data = bolen@lagwana.com
     pasteData(data)
     return
      
-AppsKey & [:: ; <--Gamer Tag 
-	data = NonlinearFruit
+GotoOPENBRACKET: ; <--Gamer Tag 
+    data = NonlinearFruit
     pasteData(data)
     return   
 
-; AppsKey & ]::
+; GotoCLOSEBRACKET:
 
-; AppsKey & \::
+; GotoBACKSLASH:
 
-; AppsKey & -:: Date
+; GotoMINUS: Date
 
-; AppsKey & =:: Time 
+; GotoPLUS: Time 
 
-; AppsKey & F1::
+; GotoF1:
 
-; AppsKey & F2:: ; <-- next bookmark related
+; GotoF2: Features List!!
 
-; AppsKey & F3:: ; <-- find next related
+; GotoF3: find next related
 
-; AppsKey & F4:: ; <-- next result related
+; GotoF4: next result related
 
-; AppsKey & F5::
+; GotoF5:
 
-; AppsKey & F6:: ; <-- spell check related
+; GotoF6: spell check related
 
-; AppsKey & F7:: ; <-- build related
+; GotoF7: build related
 
-; AppsKey & F8::
+; GotoF8:
 
-; AppsKey & F9:: ; <-- sort lines related
+; GotoF9: sort lines related
 
-; AppsKey & F10::
+; GotoF10:
 
-; AppsKey & F11:: ; <-- fullscreen related
+; GotoF11: fullscreen related
 
-; AppsKey & F12:: ; <-- break build related
+; GotoF12: break build related
 
