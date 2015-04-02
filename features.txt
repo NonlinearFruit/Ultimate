@@ -1,229 +1,98 @@
 ------------------------
 Internet -- WinKey -- #
 ------------------------
-#a    --     Insta-(A)HK
++#a             --     Insta-(A)HK
 
-#b    --     Insta-(B)ible (ESV)
++#b             --     Insta-(B)ible (ESV)
 
-#d    --     Insta-(D)ictionary
++#d             --     Insta-(D)ictionary
 
-#f    --     (F)acebook
+#f              --     (F)acebook
 
-#g    --     Insta-(G)oogle
+#g              --     (G)oogle
 
-#i    --     Insta-Google (I)mages
++#g             --     Insta-(G)oogle
 
-#m    --     Insta-Google (M)aps
++#i             --     Insta-Google (I)mages
 
-#r    --     (R)eload
++#m             --     Insta-Google (M)aps
 
-#s    --     Insta-(S)tackOverFlow
++#q             --     (Q)uerySearcher
 
-#t    --     Insta-(T)hesaurus
+#r              --     (R)eload
 
-#u    --     Insta-(U)RL
++#s             --     Insta-(S)tackOverFlow
 
-#w    --     Insta-(W)ikipedia
++#t             --     Insta-(T)hesaurus
 
-#y    --     (Y)outube
++#u             --     Insta-(U)RL
 
-#y    --     Insta-(Y)outube
++#w             --     Insta-(W)ikipedia
 
-#z    --     AHK Documentation
+#y              --     (Y)outube
+
++#y             --     Insta-(Y)outube
+
+#z              --     AHK Documentation
 
 ------------------------
   Homebrewed Internet
 ------------------------
-#d    --     Google (D)rive 
+#b              --     (B)itBucket
 
-#h    --     Git(H)ub 
+#d              --     Google (D)rive 
 
-#m    --     G(m)ail
+#e              --     Google (E)mail
 
-------------------------
-Function -- CapsLock
-------------------------
---     Wheel (Up)
+#h              --     Git(H)ub 
 
---     Wheel (Down)
+#s              --     (S)qlFiddle
 
---     Beginning of Line and Beginning of Document
+#v              --     Vertabelo
 
---     End of Line and End of Document
-
---     Queuing Paste [(a)nnex]
-
---     Incremented (C)opy
-
-# in the incClip with ~
-		return
-
-CapsLock & e    --     (E)ncompass Paste	
-
---     Encompass Copy [(G)rap]
-
---     (I)dea Saver
-
---    (K)eystroking Copy Paste
-
-!GetKeyState("Shift","p"))
-		{ ;Copying
-			Run, Notepad KeystrokeCopyPaste.txt
-		}
-		else
-		{ ;Pasting (By typing out)
-			msgbox ok
-			txt := fileReader("KeystrokeCopyPaste.txt")
-			Send %txt%
-		}
-		return
-
-CapsLock & l    --     Highlights (L)ine
-
---     Make Current Window Transparent (Toggle-ish) [(o)paque]
-
-!transLevel) ; Trans Off
-	{
-		transLevel = 201
-	}
-	else if (transLevel>200){
-		transLevel = 151
-	}
-	else if (transLevel>150){
-		transLevel = 101
-	}
-	else if (transLevel>100){
-		transLevel = 51
-	}
-	else
-	{
-		WinSet, Transparent, OFF, A
-		return
-	}
-	WinSet, Transparent, %transLevel%, A
-	return
-
-CapsLock & q    --     (Q)ueuing Copy
-
---     Always On (T)op (Credit to AppsKey Guy)
-
-!= "† ")
-	      TempText := "† " . TempText ;chr(134)
-	}
-	else
-	{
-		WinSet AlwaysOnTop, Off, A
-		if(SubStr(TempText, 1, 2) = "† ")
-			TempText := SubStr(TempText, 3)
-	}
-	WinSetTitle, A, , %TempText%
-	Return
- 
-CapsLock & v    --     Incremented Paste
-
---     Send Date
-
-!GetKeyState("Shift","p"))
-	{ ; Normal Date (w/o +)
-		FormatTime, date,, MM/dd/yy
-	}
-	else
-	{ ; Sorting Date (w/ +)
-		FormatTime, date,, yy/MM/dd
-	}
-	pasteData(date)
-	return
-
-CapsLock & =    --     Send Time 
-
+--------------------------
+Function -- CustomModifier
+--------------------------
 ------------------------
   Homebrewed Function
 ------------------------
---     Persisting Copy [(p)ersist]
-
-!GetKeyState("Shift","p"))
-        {   ; If Shift not pressed, Copy
-            data := copySelectedData()          ; Get selected text
-                                                ; Set where to persist text
-            fileName = C:\Programming\AHK\Ultimates\Scripts\Ultimatev7.6\persistantCopyPaste.txt    
-            fileDeletion(fileName)              ; Delete old text
-            fileWriter(data,fileName)           ; Persist new text
-        }
-        else
-        {   ; If Shift pressed, Paste
-            data := copySelectedData()          ; Get selected text
-                                                ; Set where to persist text
-            fileName = C:\Programming\AHK\Ultimates\Scripts\Ultimatev7.6\persistantCopyPaste.txt    
-            fileDeletion(fileName)              ; Delete old text
-            fileWriter(data,fileName)           ; Persist new text
-        }
-        return
-
-; CapsLock & q:: (Q)ueuing Copy
-
-; CapsLock & r:: 
-
-; CapsLock & s:: Persisting Paste (s)alvage
-
-; CapsLock & t:: Always On (T)op
-
-; CapsLock & u::
- 
-; CapsLock & v:: Incremented Paste
-
-; CapsLock & w:: 
-
-; CapsLock & x:: 
-
-; CapsLock & y:: 
-
-; CapsLock & z::
-
-CapsLock & ,    --    Official Email
-
---    Personal Email 
-
---    Username
-
---    LaGwana Email
-
---    Gamer Tag 
-
---    Hotkey Summarizer
-
 ------------------------
 Program -- AltKey -- !
 ------------------------
-!d    --     Choose (D)irectory
+!d              --     Choose (D)irectory
 
-!d    --     Insta-(D)irectory
++!d             --     Insta-(D)irectory
 
-!n    --     Runs Notepad
+!n              --     (N)otepad
 
-!Left    --    Spotify Previous Song 
+!Left           --     Spotify Previous Song 
 
-!Right    --    Spotify Next Song
+!Right          --     Spotify Next Song
 
-!UP    --    Spotify Pause
+!UP             --     Spotify Pause 
 
-!Down    --    Spotify Info
+!Down           --     Spotify Info
 
-!PgUP    --    Spotify Volume Up
+!PgUP           --     Spotify Volume Up
 
-!PgDn    --    Spotify Volume Down
+!PgDn           --     Spotify Volume Down
 
-!End    --     Spotify Mute
+!End            --     Spotify Mute
 
 ------------------------
   Program Homebrewed
 ------------------------
-!c    --     (C)alculator
+!c              --     (C)alculator
 
-!n    --     (N)etbeans
+!g              --     (G)it Command Line
 
-!p    --     Cmd (P)rompt
+!n              --     (N)etbeans
 
-!s    --     (S)ublime Text 2
+!p              --     Cmd (P)rompt
 
-!t    --     (T)ime Card Folder
+!s              --     (S)ublime Text 2
+
+!t              --     (T)ime Card Folder
+
+!u              --     (U)ltimate Repository Folder
 

@@ -46,7 +46,7 @@
 
 ; AppsKey & r:: 
 
-; AppsKey & s:: Persisting Paste (s)alvage
+; AppsKey & s:: (S)creen Saver
 
 ; Appskey & t:: Always On (T)op
 

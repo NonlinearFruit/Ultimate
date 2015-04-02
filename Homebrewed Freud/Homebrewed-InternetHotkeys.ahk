@@ -10,10 +10,6 @@
 	Run https://bitbucket.org/
 	Return
 
-^#b:: 
-	Send R}>j98o8fuy*#TW2bB
-	Return
-
 ; +#b:: Insta-(B)ible (ESV)
 
 ; #c::
@@ -24,7 +20,9 @@
 
 ; +#d:: Insta-(D)ictionary
 
-; #e::
+#e:: ; <-- Google (E)mail
+	Run https://mail.google.com/mail/u/0/#inbox
+	return
 
 ; #f:: (F)acebook
 
@@ -46,9 +44,7 @@
 
 ; #l::
 
-#m:: ; <-- G(m)ail
-	Run https://mail.google.com/mail/u/0/#inbox
-	return
+; #m::
 
 ; +#m:: Insta-Google (M)aps
 
@@ -78,7 +74,7 @@
 	  
 ; +#u:: Insta-(U)RL
 
-#v:: ; <--Vertabelo
+#v:: ; <-- Vertabelo
 	Run https://my.vertabelo.com
 	Return
 
