@@ -63,7 +63,7 @@ GotoP: ; <-- Persisting Copy [(p)ersist]
 
 ; GotoR: 
 
-; GotoS: Persisting Paste (S)alvage
+; GotoS: (S)creen Saver
 
 ; GotoT: Always On (T)op
 

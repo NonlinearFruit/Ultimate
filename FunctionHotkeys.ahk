@@ -163,6 +163,14 @@ GotoQ: ; <-- (Q)ueuing Copy
 		qClip%qCopyIndex% = 					; Set next qClip to be empty
 		return
 
+GotoS: ; <-- (S)creen Saver
+	RegRead, SCR_Saver, HKEY_CURRENT_USER, Control Panel\Desktop, SCRNSAVE.EXE
+	If ( !ErrorLevel and SCR_Saver )
+	{
+		SendMessage, 0x112, 0xF140, 0, , Program Manager ; 0x112 is WM_SYSCOMMAND ; 0xF140 is SC_SCREENSAVE
+	}
+	Return
+
 GotoT: ; <-- Always On (T)op (Credit to Appskey Guy)
 	WinGetTitle, TempText, A
 	if(!GetKeyState("Shift","p"))
@@ -183,7 +191,8 @@ GotoT: ; <-- Always On (T)op (Credit to Appskey Guy)
 GotoV: ; <-- Incremented Paste
 		StringReplace , temp, incClip, ~, %incIndex%	; Replace ~ with index
 		incIndex := incIndex + 1			; Increment index
-		pasteData(temp)						; Pastes the incClip var with updated index
+		; pasteData(temp)						; Pastes the incClip var with updated index
+		Send %temp%
 		return
 
 GotoMINUS: ; <-- Send Date

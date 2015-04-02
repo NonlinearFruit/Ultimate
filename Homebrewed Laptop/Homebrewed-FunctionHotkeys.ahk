@@ -63,7 +63,7 @@
 
 ; AppsKey & r:: 
 
-; AppsKey & s::
+; AppsKey & s:: (S)creen Saver
 
 ; Appskey & t:: Always On (T)op
 
