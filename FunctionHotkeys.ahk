@@ -187,13 +187,13 @@ GotoV: ; <-- Incremented Paste
 		return
 
 GotoMINUS: ; <-- Send Date
-      if(!GetKeyState("Shift","p"))
+    if(!GetKeyState("Shift","p"))
 	{ ; Normal Date (w/o +)
 		FormatTime, date,, MM/dd/yy
 	}
 	else
 	{ ; Sorting Date (w/ +)
-		FormatTime, date,, yy/MM/dd
+		FormatTime, date,, yy-MM-dd
 	}
 	pasteData(date)
 	return
@@ -205,6 +205,8 @@ GotoPLUS: ; <-- Send Time
 
 GotoENTER: ; <-- Jump to end of line then hit enter
 	Send {End}
+	if(GetKeyState("Shift","p"))
+		Send {SC027}
 	Send {Enter}
 	return
 

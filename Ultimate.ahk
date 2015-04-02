@@ -31,6 +31,7 @@ dynFunctionMapper(customModifier)
 ; Computer you're using, should match the folders
 ; [EI: Homebrewed %box%]
 box = Freud
+
 /*
 //===================================\\
 ||                                   ||
@@ -96,10 +97,10 @@ box = Freud
 ; }
 ; else if(box=Laptop)
 ; {
-	#Include Homebrewed Laptop\Homebrewed-CombinationKeys.ahk
-	#Include Homebrewed Laptop\Homebrewed-InternetHotkeys.ahk
-	#Include Homebrewed Laptop\Homebrewed-FunctionHotkeys.ahk
-	#Include Homebrewed Laptop\Homebrewed-ProgramsHotkeys.ahk
+	; #Include Homebrewed Laptop\Homebrewed-CombinationKeys.ahk
+	; #Include Homebrewed Laptop\Homebrewed-InternetHotkeys.ahk
+	; #Include Homebrewed Laptop\Homebrewed-FunctionHotkeys.ahk
+	; #Include Homebrewed Laptop\Homebrewed-ProgramsHotkeys.ahk
 ; }
 ; else if(box=MU)
 ; {

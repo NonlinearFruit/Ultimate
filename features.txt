@@ -1,0 +1,98 @@
+------------------------
+Internet -- WinKey -- #
+------------------------
++#a             --     Insta-(A)HK
+
++#b             --     Insta-(B)ible (ESV)
+
++#d             --     Insta-(D)ictionary
+
+#f              --     (F)acebook
+
+#g              --     (G)oogle
+
++#g             --     Insta-(G)oogle
+
++#i             --     Insta-Google (I)mages
+
++#m             --     Insta-Google (M)aps
+
++#q             --     (Q)uerySearcher
+
+#r              --     (R)eload
+
++#s             --     Insta-(S)tackOverFlow
+
++#t             --     Insta-(T)hesaurus
+
++#u             --     Insta-(U)RL
+
++#w             --     Insta-(W)ikipedia
+
+#y              --     (Y)outube
+
++#y             --     Insta-(Y)outube
+
+#z              --     AHK Documentation
+
+------------------------
+  Homebrewed Internet
+------------------------
+#b              --     (B)itBucket
+
+#d              --     Google (D)rive 
+
+#e              --     Google (E)mail
+
+#h              --     Git(H)ub 
+
+#s              --     (S)qlFiddle
+
+#v              --     Vertabelo
+
+--------------------------
+Function -- CustomModifier
+--------------------------
+------------------------
+  Homebrewed Function
+------------------------
+------------------------
+Program -- AltKey -- !
+------------------------
+!d              --     Choose (D)irectory
+
++!d             --     Insta-(D)irectory
+
+!n              --     (N)otepad
+
+!Left           --     Spotify Previous Song 
+
+!Right          --     Spotify Next Song
+
+!UP             --     Spotify Pause 
+
+!Down           --     Spotify Info
+
+!PgUP           --     Spotify Volume Up
+
+!PgDn           --     Spotify Volume Down
+
+!End            --     Spotify Mute
+
+------------------------
+  Program Homebrewed
+------------------------
+!c              --     (C)alculator
+
+!g              --     (G)it Command Line
+
+!n              --     (N)etbeans
+
+!p              --     Cmd (P)rompt
+
+!s              --     (S)ublime Text 2
+
+!t              --     (T)ime Card Folder
+
+!u              --     (U)ltimate Repository Folder
+

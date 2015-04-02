@@ -74,7 +74,7 @@
 	  
 ; +#u:: Insta-(U)RL
 
-#v:: ; <--Vertabelo
+#v:: ; <-- Vertabelo
 	Run https://my.vertabelo.com
 	Return
 
