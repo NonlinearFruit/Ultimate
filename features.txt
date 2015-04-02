@@ -1,98 +1,152 @@
 ------------------------
 Internet -- WinKey -- #
 ------------------------
-+#a             --     Insta-(A)HK
++#a                   --     Insta-(A)HK
 
-+#b             --     Insta-(B)ible (ESV)
++#b                   --     Insta-(B)ible (ESV)
 
-+#d             --     Insta-(D)ictionary
++#d                   --     Insta-(D)ictionary
 
-#f              --     (F)acebook
+#f                    --     (F)acebook
 
-#g              --     (G)oogle
+#g                    --     (G)oogle
 
-+#g             --     Insta-(G)oogle
++#g                   --     Insta-(G)oogle
 
-+#i             --     Insta-Google (I)mages
++#i                   --     Insta-Google (I)mages
 
-+#m             --     Insta-Google (M)aps
++#m                   --     Insta-Google (M)aps
 
-+#q             --     (Q)uerySearcher
++#q                   --     (Q)uerySearcher
 
-#r              --     (R)eload
+#r                    --     (R)eload
 
-+#s             --     Insta-(S)tackOverFlow
++#s                   --     Insta-(S)tackOverFlow
 
-+#t             --     Insta-(T)hesaurus
++#t                   --     Insta-(T)hesaurus
 
-+#u             --     Insta-(U)RL
++#u                   --     Insta-(U)RL
 
-+#w             --     Insta-(W)ikipedia
++#w                   --     Insta-(W)ikipedia
 
-#y              --     (Y)outube
+#y                    --     (Y)outube
 
-+#y             --     Insta-(Y)outube
++#y                   --     Insta-(Y)outube
 
-#z              --     AHK Documentation
+#z                    --     AHK Documentation
 
 ------------------------
   Homebrewed Internet
 ------------------------
-#b              --     (B)itBucket
+#d                    --    (D)2L 
 
-#d              --     Google (D)rive 
+#e                    --    Project (E)uler
 
-#e              --     Google (E)mail
+#m                    --     (M)inecraft Song Playlist
 
-#h              --     Git(H)ub 
+#p                    --    (P)roject Zomboid
 
-#s              --     (S)qlFiddle
+#u                    --     (M)U Email
 
-#v              --     Vertabelo
+------------------------
+Function -- CapsLock
+------------------------
+CapsLock & UP         --     Wheel (Up)
 
---------------------------
-Function -- CustomModifier
---------------------------
+CapsLock & DOWN       --     Wheel (Down)
+
+CapsLock & LEFT       --     Beginning of Line and Beginning of Document
+
+CapsLock & RIGHT      --     End of Line and End of Document
+
+CapsLock & A          --     Queuing Paste (a)nnex
+
+CapsLock & C          --     Incremented (C)opy
+
+CapsLock & E          --     (E)ncompass Paste	
+
+CapsLock & G          --     Encompass Copy [(G)rap]
+
+CapsLock & I          --     (I)dea Saver
+
+CapsLock & K          --    (K)eystroking Copy Paste
+
+CapsLock & L          --     Highlights (L)ine
+
+CapsLock & O          --     Make Current Window Transparent (Toggle-ish) [(o)paque]
+
+CapsLock & Q          --     (Q)ueuing Copy
+
+CapsLock & S          --     (S)creen Saver
+
+CapsLock & T          --     Always On (T)op (Credit to Appskey Guy)
+
+CapsLock & V          --     Incremented Paste
+
+CapsLock & MINUS      --     Send Date
+
+CapsLock & PLUS       --     Send Time 
+
+CapsLock & ENTER      --     Jump to end of line then hit enter
+
+CapsLock & F2         --    Hotkey Summarizer
+
 ------------------------
   Homebrewed Function
 ------------------------
+CapsLock & P          --     Persisting Copy [(p)ersist]
+
+CapsLock & COMMA      --    Official Email
+
+CapsLock & PERIOD     --    Personal Email 
+
+CapsLock & SLASH      --    Username
+
+CapsLock & SC027      --    LaGwana Email
+
+CapsLock & OPENBRACKET--    Gamer Tag 
+
 ------------------------
 Program -- AltKey -- !
 ------------------------
-!d              --     Choose (D)irectory
+!d                    --     Choose (D)irectory
 
-+!d             --     Insta-(D)irectory
++!d                   --     Insta-(D)irectory
 
-!n              --     (N)otepad
+!n                    --     (N)otepad
 
-!Left           --     Spotify Previous Song 
+!Left                 --     Spotify Previous Song 
 
-!Right          --     Spotify Next Song
+!Right                --     Spotify Next Song
 
-!UP             --     Spotify Pause 
+!UP                   --     Spotify Pause 
 
-!Down           --     Spotify Info
+!Down                 --     Spotify Info
 
-!PgUP           --     Spotify Volume Up
+!PgUP                 --     Spotify Volume Up
 
-!PgDn           --     Spotify Volume Down
+!PgDn                 --     Spotify Volume Down
 
-!End            --     Spotify Mute
+!End                  --     Spotify Mute
 
 ------------------------
   Program Homebrewed
 ------------------------
-!c              --     (C)alculator
+!c                    --     (C)alculator
 
-!g              --     (G)it Command Line
+!f                    --    (F)TB
 
-!n              --     (N)etbeans
+!g                    --     (G)imp
 
-!p              --     Cmd (P)rompt
+!j                    --     Public Shared Folder [(J)MBolen2017]
 
-!s              --     (S)ublime Text 2
+!n                    --     (N)otepad++
 
-!t              --     (T)ime Card Folder
+!p                    --     Cmd (P)rompt
 
-!u              --     (U)ltimate Repository Folder
+!r                    --     (R)obocode
+
++!r                   --     (R)obocode Javadoc
+
+!s                    --     (S)ublime Text 2
 

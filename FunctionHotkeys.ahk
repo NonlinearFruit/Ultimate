@@ -219,4 +219,57 @@ GotoENTER: ; <-- Jump to end of line then hit enter
 	Send {Enter}
 	return
 
+GotoF2: ; <-- Hotkey Summarizer
+    
+    if(A_IsCompiled)
+    {
+        ; ex. path = C:\Programming\AHK\Ultimates\Ultimate\Ultimate\
+        if(!path)
+            Return
+    }
+    else 
+    {
+        path := A_ScriptDir . "\"
+    }
 
+    fileDeletion("features.txt")
+
+    fileWriter("------------------------`n","features.txt")
+    fileWriter("Internet -- WinKey -- #`n","features.txt")
+    fileWriter("------------------------`n","features.txt")
+    file = %path%InternetHotkeys.ahk
+    featureRetriever(fileReader(file))
+
+    fileWriter("------------------------`n","features.txt")
+    fileWriter("  Homebrewed Internet`n","features.txt")
+    fileWriter("------------------------`n","features.txt")
+    file = %path%Homebrewed %box%\Homebrewed-InternetHotkeys.ahk
+    featureRetriever(fileReader(file))
+
+    str = Function -- %modify%`n
+    fileWriter("------------------------`n","features.txt")
+    fileWriter(str,"features.txt")
+    fileWriter("------------------------`n","features.txt")
+    file = %path%FunctionHotkeys.ahk
+    featureRetriever(fileReader(file))
+
+    fileWriter("------------------------`n","features.txt")
+    fileWriter("  Homebrewed Function`n","features.txt")
+    fileWriter("------------------------`n","features.txt")
+    file = %path%Homebrewed %box%\Homebrewed-FunctionHotkeys.ahk
+    featureRetriever(fileReader(file))
+
+    fileWriter("------------------------`n","features.txt")
+    fileWriter("Program -- AltKey -- !`n","features.txt")
+    fileWriter("------------------------`n","features.txt")
+    file = %path%ProgramsHotkeys.ahk
+    featureRetriever(fileReader(file))
+    
+    fileWriter("------------------------`n","features.txt")
+    fileWriter("  Program Homebrewed`n","features.txt")
+    fileWriter("------------------------`n","features.txt")
+    file = %path%Homebrewed %box%\Homebrewed-ProgramsHotkeys.ahk
+    featureRetriever(fileReader(file))
+
+    Run, Notepad features.txt
+    return

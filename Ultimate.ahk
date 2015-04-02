@@ -23,14 +23,11 @@ SetCapsLockState, alwaysoff
 
 ; Choose a custom modifier for function keys 
 ; [Note: not alt or win and if null -> AppsKey]
-customModifier = CapsLock
+modify = CapsLock
+box = Freud
 
 ; Map that modifier to all of the appropriate labels
-dynFunctionMapper(customModifier)
-
-; Computer you're using, should match the folders
-; [EI: Homebrewed %box%]
-box = Freud
+dynFunctionMapper()
 
 /*
 //===================================\\
