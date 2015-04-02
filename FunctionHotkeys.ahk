@@ -219,7 +219,7 @@ GotoENTER: ; <-- Jump to end of line then hit enter
 	Send {Enter}
 	return
 
-GotoF2: ; <--Hotkey Summarizer
+GotoF2: ; <-- Hotkey Summarizer
     
     if(A_IsCompiled)
     {

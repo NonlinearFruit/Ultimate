@@ -38,17 +38,15 @@ Internet -- WinKey -- #
 ------------------------
   Homebrewed Internet
 ------------------------
-#b                    --     (B)itBucket
+#d                    --    (D)2L 
 
-#d                    --     Google (D)rive 
+#e                    --    Project (E)uler
 
-#e                    --     Google (E)mail
+#m                    --     (M)inecraft Song Playlist
 
-#h                    --     Git(H)ub 
+#p                    --    (P)roject Zomboid
 
-#s                    --     (S)qlFiddle
-
-#v                    --     Vertabelo
+#u                    --     (M)U Email
 
 ------------------------
 Function -- CapsLock
@@ -136,15 +134,19 @@ Program -- AltKey -- !
 ------------------------
 !c                    --     (C)alculator
 
-!g                    --     (G)it Command Line
+!f                    --    (F)TB
 
-!n                    --     (N)etbeans
+!g                    --     (G)imp
+
+!j                    --     Public Shared Folder [(J)MBolen2017]
+
+!n                    --     (N)otepad++
 
 !p                    --     Cmd (P)rompt
 
+!r                    --     (R)obocode
+
++!r                   --     (R)obocode Javadoc
+
 !s                    --     (S)ublime Text 2
-
-!t                    --     (T)ime Card Folder
-
-!u                    --     (U)ltimate Repository Folder
 

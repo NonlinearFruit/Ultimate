@@ -42,9 +42,7 @@
 
 ; #l::
 
-#m:: ; <-- (M)inecraft Song Playlist
-	Run https://www.youtube.com/playlist?list=PL38BF48E62BD697E3
-	return
+; #m:: DEFAULT: Windows Minimize All
 
 ; +#m:: Insta-Google (M)aps
 
