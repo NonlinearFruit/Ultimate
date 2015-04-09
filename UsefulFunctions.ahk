@@ -507,4 +507,16 @@ dynFunctionMapper()
 		key := " & f12"
 		Hotkey, %modify% %key%, GotoF12
 	}
+
+	if(IsLabel("GotoXButton1"))
+	{
+		key := " & XButton1"
+		Hotkey, %modify% %key%, GotoXButton1
+	}
+
+	if(IsLabel("GotoXButton2"))
+	{
+		key := " & XButton2"
+		Hotkey, %modify% %key%, GotoXButton2
+	}
 }

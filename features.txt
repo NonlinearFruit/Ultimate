@@ -38,15 +38,17 @@ Internet -- WinKey -- #
 ------------------------
   Homebrewed Internet
 ------------------------
-#d                    --    (D)2L 
+#b                    --     (B)itBucket
 
-#e                    --    Project (E)uler
+#d                    --     Google (D)rive 
 
-#m                    --     (M)inecraft Song Playlist
+#e                    --     Google (E)mail
 
-#p                    --    (P)roject Zomboid
+#h                    --     Git(H)ub 
 
-#u                    --     (M)U Email
+#s                    --     (S)qlFiddle
+
+#v                    --     Vertabelo
 
 ------------------------
 Function -- CapsLock
@@ -89,22 +91,26 @@ CapsLock & PLUS       --     Send Time
 
 CapsLock & ENTER      --     Jump to end of line then hit enter
 
-CapsLock & F2         --    Hotkey Summarizer
+CapsLock & F2         --     Hotkey Summarizer
 
 ------------------------
   Homebrewed Function
 ------------------------
 CapsLock & P          --     Persisting Copy [(p)ersist]
 
-CapsLock & COMMA      --    Official Email
+CapsLock & COMMA      --     Official Email
 
-CapsLock & PERIOD     --    Personal Email 
+CapsLock & PERIOD     --     Personal Email 
 
-CapsLock & SLASH      --    Username
+CapsLock & SLASH      --     Username
 
-CapsLock & SC027      --    LaGwana Email
+CapsLock & SC027      --     LaGwana Email
 
-CapsLock & OPENBRACKET--    Gamer Tag 
+CapsLock & OPENBRACKET--     Gamer Tag 
+
+CapsLock & XButton1   --     WIP
+
+CapsLock & XButton2   --     WIP
 
 ------------------------
 Program -- AltKey -- !
@@ -134,19 +140,15 @@ Program -- AltKey -- !
 ------------------------
 !c                    --     (C)alculator
 
-!f                    --    (F)TB
+!g                    --     (G)it Command Line
 
-!g                    --     (G)imp
-
-!j                    --     Public Shared Folder [(J)MBolen2017]
-
-!n                    --     (N)otepad++
+!n                    --     (N)etbeans
 
 !p                    --     Cmd (P)rompt
 
-!r                    --     (R)obocode
-
-+!r                   --     (R)obocode Javadoc
-
 !s                    --     (S)ublime Text 2
+
+!t                    --     (T)ime Card Folder
+
+!u                    --     (U)ltimate Repository Folder
 

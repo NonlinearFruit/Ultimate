@@ -79,27 +79,27 @@ GotoP: ; <-- Persisting Copy [(p)ersist]
 
 ; GotoZ:
 
-GotoCOMMA: ; <--Official Email
+GotoCOMMA: ; <-- Official Email
     data = bmbolen2017@spartans.manchester.edu
     pasteData(data)
     return
 
-GotoPERIOD: ; <--Personal Email 
+GotoPERIOD: ; <-- Personal Email 
     data = 1123benji5813@gmail.com
     pasteData(data)
     return  
 
-GotoSLASH: ; <--Username
+GotoSLASH: ; <-- Username
     data = bmbolen2017
     pasteData(data)
     return
 
-GotoSC027: ; <--LaGwana Email
+GotoSC027: ; <-- LaGwana Email
     data = bolen@lagwana.com
     pasteData(data)
     return
      
-GotoOPENBRACKET: ; <--Gamer Tag 
+GotoOPENBRACKET: ; <-- Gamer Tag 
     data = NonlinearFruit
     pasteData(data)
     return   
@@ -136,3 +136,10 @@ GotoOPENBRACKET: ; <--Gamer Tag
 
 ; GotoF12: break build related
 
+GotoXButton1: ; <-- WIP
+    Send 11111
+    Return
+
+GotoXButton2: ; <-- WIP
+    Send 22222
+    Return
