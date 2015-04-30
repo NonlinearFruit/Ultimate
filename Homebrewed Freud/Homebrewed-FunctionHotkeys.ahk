@@ -102,7 +102,7 @@ GotoSC027: ; <-- LaGwana Email
 GotoOPENBRACKET: ; <-- Gamer Tag 
     data = NonlinearFruit
     pasteData(data)
-    return   
+    return
 
 ; GotoCLOSEBRACKET:
 
@@ -136,10 +136,14 @@ GotoOPENBRACKET: ; <-- Gamer Tag
 
 ; GotoF12: break build related
 
-GotoXButton1: ; <-- WIP
-    Send 11111
+; GotoXButton1: ; <-- WIP
+XButton1::
+    xbut:=copySelectedData()
+    SplashImage, OffSplashImage, Off
     Return
 
-GotoXButton2: ; <-- WIP
-    Send 22222
+; GotoXButton2: ; <-- WIP
+XButton2::
+    Send %xbut%
+    SplashImage, C:\Users\Ben\Pictures\ScreenSaver\7.jpg
     Return

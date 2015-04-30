@@ -122,7 +122,7 @@
 	else
 	{
 		Run http://www.google.com/search?hl=en&q=%query1%
-		Msgbox %query1% is not a recognized command {a,b,d,g,i,m,s,t,u,w,y} ... So we'll google it!!
+		; Msgbox %query1% is not a recognized command {a,b,d,g,i,m,s,t,u,w,y} ... So we'll google it!!
 	}
 	return
 			
@@ -167,3 +167,6 @@
 #z:: ; <-- AHK Documentation
 	Run http://www.autohotkey.com/docs/Tutorial.htm
 	return
+
+
+	

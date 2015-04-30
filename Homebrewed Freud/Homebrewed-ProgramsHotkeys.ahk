@@ -43,7 +43,7 @@
 ; !o::
 
 !p:: ; <-- Cmd (P)rompt
-	Run C:\Windows\System32\cmd.exe
+	Run C:\tools\cmder\Cmder.exe
 	Return
 
 ; !q::

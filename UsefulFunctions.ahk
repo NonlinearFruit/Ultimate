@@ -76,6 +76,7 @@ encCopyPasteGlobals()
 {
 	global
 	encClip = 		; Encompass Clipboard
+	xbut = 
 }
 
 ; This creates global variables for the Queue Copy Paste
