@@ -46,9 +46,7 @@
 
 ; !o::
 
-!p:: ; <-- Cmd (P)rompt
-	Run C:\Windows\System32\cmd.exe
-	return
+; !p:: (c)mder/cmd
 
 ; !q::
 

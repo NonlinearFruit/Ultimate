@@ -121,6 +121,8 @@ Program -- AltKey -- !
 
 !n                    --     (N)otepad
 
++!^c                  --     WIP Install (C)hocolately
+
 !Left                 --     Spotify Previous Song 
 
 !Right                --     Spotify Next Song

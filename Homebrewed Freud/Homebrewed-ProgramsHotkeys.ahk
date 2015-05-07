@@ -42,9 +42,7 @@
 
 ; !o::
 
-!p:: ; <-- Cmd (P)rompt
-	Run C:\tools\cmder\Cmder.exe
-	Return
+; !p:: (c)mder/cmd
 
 ; !q::
 

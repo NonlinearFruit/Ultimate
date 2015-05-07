@@ -133,10 +133,16 @@
 	Run Notepad
 	return
 
+!p:: ; <-- (c)mder, else (c)md 
+	Run cmder, ,UseErrorLevel
+	if(A_LastError!=0)
+	{
+		Run cmd
+	}
+	Return
 
 +!^c:: ; <-- WIP Install (C)hocolately
-	Run cmd.exe 
-	Send echo hello {Enter}
+	Run Resources/chocolatey.bat
 	return
 ;---------------------------------------------------------------------------------------------------------
 ;---------------------------------------------------------------------------------------------------------
