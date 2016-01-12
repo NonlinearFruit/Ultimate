@@ -1,7 +1,7 @@
 # Ultimate
 This ahk script allows the user to gain significant independence from his mouse by a series of extremely useful hotkeys to help alliviate the mundane, tedious tasks. 
 
-__NOTE: [1-1-2016]__ This is postponed indefinitely because of my recent switch to linux. I've left this repo up as a reference/guide for future aspiring power users. Remember, with great power come great responsibility.
+__NOTE: [1-1-2016]__ This is postponed indefinitely because of my recent switch to Linux. I've left this repo up as a reference/guide for future aspiring power users. Remember, with great power comes great responsibility.
 
 
 ## Table of Contents
